@@ -12,7 +12,7 @@ export default function Home() {
                 <header className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-white/10 pb-6">
                     <div>
                         <h1 className="text-2xl md:text-4xl font-black tracking-tighter uppercase text-white leading-tight mb-4">
-                            Semiconductor<br />
+                            Semicon<br />
                             <span className="text-portal-accent text-stroke">Investors</span>
                         </h1>
 

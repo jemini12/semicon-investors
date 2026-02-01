@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Semiconductor Investors",
+    title: "Semicon Investors",
     description: "Advanced semiconductor investment analysis",
 };
 
