@@ -1,6 +1,7 @@
 export type MarketItem = {
     symbol: string;
     name: string;
+    koName?: string;
     basePrice: number;
     currency: 'KRW' | 'USD' | 'XZN' | 'PTS'; // XZN for rates, PTS for indices if needed
     type: 'KRX' | 'US' | 'INDEX' | 'MACRO';
@@ -10,8 +11,8 @@ export type MarketItem = {
 
 export const INITIAL_MARKET_DATA: MarketItem[] = [
     // --- Memory Cycle (The Core) ---
-    { symbol: '005930.KS', name: 'Samsung Elec', basePrice: 74200, currency: 'KRW', type: 'KRX', sector: 'Memory', changeRange: 2.5 },
-    { symbol: '000660.KS', name: 'SK Hynix', basePrice: 198000, currency: 'KRW', type: 'KRX', sector: 'Memory', changeRange: 3.0 },
+    { symbol: '005930.KS', name: 'Samsung Elec', koName: '삼성전자', basePrice: 74200, currency: 'KRW', type: 'KRX', sector: 'Memory', changeRange: 2.5 },
+    { symbol: '000660.KS', name: 'SK Hynix', koName: 'SK하이닉스', basePrice: 198000, currency: 'KRW', type: 'KRX', sector: 'Memory', changeRange: 3.0 },
     { symbol: 'MU', name: 'Micron', basePrice: 110.50, currency: 'USD', type: 'US', sector: 'Memory', changeRange: 4.0 },
 
     // --- Macro Economics ---

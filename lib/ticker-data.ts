@@ -6,34 +6,34 @@ export const SECTOR_DATA: MarketItem[] = [
     // ==============================================================================
 
     // --- Memory ---
-    { symbol: '005930.KS', name: 'Samsung Electronics', basePrice: 74200, currency: 'KRW', type: 'KRX', sector: 'Memory', changeRange: 2.5 },
-    { symbol: '000660.KS', name: 'SK hynix', basePrice: 198000, currency: 'KRW', type: 'KRX', sector: 'Memory', changeRange: 3.0 },
+    { symbol: '005930.KS', name: 'Samsung Electronics', koName: '삼성전자', basePrice: 74200, currency: 'KRW', type: 'KRX', sector: 'Memory', changeRange: 2.5 },
+    { symbol: '000660.KS', name: 'SK hynix', koName: 'SK하이닉스', basePrice: 198000, currency: 'KRW', type: 'KRX', sector: 'Memory', changeRange: 3.0 },
 
     // --- Foundry / Logic ---
-    { symbol: '000990.KS', name: 'DB HiTek', basePrice: 45000, currency: 'KRW', type: 'KRX', sector: 'Foundry', changeRange: 1.2 },
-    { symbol: '108320.KQ', name: 'LX Semicon', basePrice: 70000, currency: 'KRW', type: 'KRX', sector: 'Logic', changeRange: 1.5 },
+    { symbol: '000990.KS', name: 'DB HiTek', koName: 'DB하이텍', basePrice: 45000, currency: 'KRW', type: 'KRX', sector: 'Foundry', changeRange: 1.2 },
+    { symbol: '108320.KQ', name: 'LX Semicon', koName: 'LX세미콘', basePrice: 70000, currency: 'KRW', type: 'KRX', sector: 'Logic', changeRange: 1.5 },
 
     // --- Equipment (Wafer Fab, Test, OSAT, Parts) ---
-    { symbol: '042700.KS', name: 'Hanmi Semiconductor', basePrice: 140000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 3.0 },
-    { symbol: '403870.KQ', name: 'HPSP', basePrice: 40000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 2.5 },
-    { symbol: '036930.KQ', name: 'Jusung Engineering', basePrice: 28000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 2.0 },
-    { symbol: '240810.KQ', name: 'Wonik IPS', basePrice: 35000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.5 },
-    { symbol: '084370.KQ', name: 'Eugene Tech', basePrice: 45000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.5 },
-    { symbol: '029460.KS', name: 'KC', basePrice: 20000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.2 },
-    { symbol: '281820.KS', name: 'KC Tech', basePrice: 38000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.5 },
-    { symbol: '058470.KQ', name: 'Leeno Industrial', basePrice: 200000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.5 },
-    { symbol: '039030.KQ', name: 'EO Technics', basePrice: 150000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.8 },
-    { symbol: '095340.KQ', name: 'ISC', basePrice: 80000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.5 },
-    { symbol: '232140.KQ', name: 'YC', basePrice: 15000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.5 },
-    { symbol: '067310.KQ', name: 'Hana Micron', basePrice: 25000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.4 },
+    { symbol: '042700.KS', name: 'Hanmi Semiconductor', koName: '한미반도체', basePrice: 140000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 3.0 },
+    { symbol: '403870.KQ', name: 'HPSP', koName: 'HPSP', basePrice: 40000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 2.5 },
+    { symbol: '036930.KQ', name: 'Jusung Engineering', koName: '주성엔지니어링', basePrice: 28000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 2.0 },
+    { symbol: '240810.KQ', name: 'Wonik IPS', koName: '원익IPS', basePrice: 35000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.5 },
+    { symbol: '084370.KQ', name: 'Eugene Tech', koName: '유진테크', basePrice: 45000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.5 },
+    { symbol: '029460.KS', name: 'KC', koName: '케이씨', basePrice: 20000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.2 },
+    { symbol: '281820.KS', name: 'KC Tech', koName: '케이씨텍', basePrice: 38000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.5 },
+    { symbol: '058470.KQ', name: 'Leeno Industrial', koName: '리노공업', basePrice: 200000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.5 },
+    { symbol: '039030.KQ', name: 'EO Technics', koName: '이오테크닉스', basePrice: 150000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.8 },
+    { symbol: '095340.KQ', name: 'ISC', koName: 'ISC', basePrice: 80000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.5 },
+    { symbol: '232140.KQ', name: 'YC', koName: '와이씨', basePrice: 15000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.5 },
+    { symbol: '067310.KQ', name: 'Hana Micron', koName: '하나마이크론', basePrice: 25000, currency: 'KRW', type: 'KRX', sector: 'Equipment', changeRange: 1.4 },
 
     // --- Materials / Components ---
-    { symbol: '357780.KQ', name: 'Soulbrain', basePrice: 280000, currency: 'KRW', type: 'KRX', sector: 'Materials', changeRange: 1.5 },
-    { symbol: '005290.KQ', name: 'Dongjin Semichem', basePrice: 40000, currency: 'KRW', type: 'KRX', sector: 'Materials', changeRange: 1.2 },
-    { symbol: '281740.KQ', name: 'Lake Materials', basePrice: 20000, currency: 'KRW', type: 'KRX', sector: 'Materials', changeRange: 2.0 },
-    { symbol: '101490.KQ', name: 'S&S Tech', basePrice: 50000, currency: 'KRW', type: 'KRX', sector: 'Materials', changeRange: 2.0 },
-    { symbol: '064760.KQ', name: 'TCK', basePrice: 110000, currency: 'KRW', type: 'KRX', sector: 'Materials', changeRange: 1.5 },
-    { symbol: '009150.KS', name: 'Samsung Electro-Mech', basePrice: 140000, currency: 'KRW', type: 'KRX', sector: 'Materials', changeRange: 1.2 },
+    { symbol: '357780.KQ', name: 'Soulbrain', koName: '솔브레인', basePrice: 280000, currency: 'KRW', type: 'KRX', sector: 'Materials', changeRange: 1.5 },
+    { symbol: '005290.KQ', name: 'Dongjin Semichem', koName: '동진쎄미켐', basePrice: 40000, currency: 'KRW', type: 'KRX', sector: 'Materials', changeRange: 1.2 },
+    { symbol: '281740.KQ', name: 'Lake Materials', koName: '레이크머티리얼즈', basePrice: 20000, currency: 'KRW', type: 'KRX', sector: 'Materials', changeRange: 2.0 },
+    { symbol: '101490.KQ', name: 'S&S Tech', koName: '에스앤에스텍', basePrice: 50000, currency: 'KRW', type: 'KRX', sector: 'Materials', changeRange: 2.0 },
+    { symbol: '064760.KQ', name: 'TCK', koName: '티씨케이', basePrice: 110000, currency: 'KRW', type: 'KRX', sector: 'Materials', changeRange: 1.5 },
+    { symbol: '009150.KS', name: 'Samsung Electro-Mech', koName: '삼성전기', basePrice: 140000, currency: 'KRW', type: 'KRX', sector: 'Materials', changeRange: 1.2 },
 
     // ==============================================================================
     // SOX (Global Context)

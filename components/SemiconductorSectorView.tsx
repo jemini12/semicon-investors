@@ -63,7 +63,7 @@ export default function SemiconductorSectorView() {
                                             const isPositive = change >= 0 && !isNeutral;
 
                                             return (
-                                                <div key={item.symbol} className="relative flex items-center py-12 px-4 bg-portal-black/40 border border-white/5 hover:border-portal-accent/30 hover:bg-white/5 transition-colors group overflow-hidden">
+                                                <div key={item.symbol} className="relative flex items-center py-10 px-4 bg-portal-black/40 border border-white/5 hover:border-portal-accent/30 hover:bg-white/5 transition-colors group overflow-hidden">
                                                     {/* Sparkline Underlay */}
                                                     <Sparkline data={data[item.symbol]?.sparkline || []} isPositive={isPositive} isUnderlay={true} />
 
@@ -76,7 +76,7 @@ export default function SemiconductorSectorView() {
                                                             rel="noopener noreferrer"
                                                             className="flex flex-col flex-1 min-w-0 mr-4 hover:text-portal-accent transition-colors overflow-hidden"
                                                         >
-                                                            <span className="font-bold text-slate-200 text-sm truncate group-hover:text-portal-accent" title={item.name}>{item.name}</span>
+                                                            <span className="font-bold text-slate-200 text-sm truncate group-hover:text-portal-accent" title={item.type === 'KRX' ? item.koName : item.name}>{item.type === 'KRX' ? item.koName : item.name}</span>
                                                             <span className="text-[10px] text-slate-500 font-mono group-hover:text-portal-accent/70">{item.symbol}</span>
                                                         </a>
 

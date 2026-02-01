@@ -48,13 +48,13 @@ export default function MemoryCycleView() {
                         const isPositive = change >= 0 && !isNeutral;
 
                         return (
-                            <div key={item.symbol} className="relative bg-portal-black/50 py-16 px-6 border-t-2 border-white/10 hover:border-portal-accent transition-colors overflow-hidden group">
+                            <div key={item.symbol} className="relative bg-portal-black/50 py-12 px-6 border-t-2 border-white/10 hover:border-portal-accent transition-colors overflow-hidden group">
                                 {/* Sparkline Underlay */}
                                 <Sparkline data={data[item.symbol]?.sparkline || []} isPositive={isPositive} isUnderlay={true} />
 
                                 <div className="relative z-10">
                                     <div className="flex justify-between items-start mb-4">
-                                        <span className="text-sm font-bold text-slate-400 group-hover:text-portal-accent transition-colors">{item.name}</span>
+                                        <span className="text-sm font-bold text-slate-400 group-hover:text-portal-accent transition-colors">{item.type === 'KRX' ? item.koName : item.name}</span>
                                         <span className="text-xs font-mono text-orange-500/60">{item.symbol}</span>
                                     </div>
 
