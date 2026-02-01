@@ -1,5 +1,6 @@
 import SemiconductorSectorView from '@/components/SemiconductorSectorView';
 import MacroView from '@/components/MacroView';
+import MarketInsightsPanel from '@/components/MarketInsightsPanel';
 
 
 export default function Home() {
@@ -22,6 +23,11 @@ export default function Home() {
                 {/* Macro Overview */}
                 <section>
                     <MacroView />
+                </section>
+
+                {/* AI-Powered Market Intelligence */}
+                <section>
+                    <MarketInsightsPanel />
                 </section>
 
                 {/* Main Sector View */}
