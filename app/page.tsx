@@ -20,18 +20,18 @@ export default function Home() {
 
                 </header>
 
-                {/* Macro Overview */}
-                <section>
-                    <MacroView />
-                </section>
-
-                {/* AI-Powered Market Intelligence */}
+                {/* AI-Powered Market Analysis */}
                 <section>
                     <MarketInsightsPanel />
                 </section>
 
                 {/* Main Sector View */}
                 <SemiconductorSectorView />
+
+                {/* Macro Overview */}
+                <section>
+                    <MacroView />
+                </section>
 
             </div>
         </main>
