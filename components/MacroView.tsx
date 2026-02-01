@@ -5,12 +5,13 @@ import { SECTOR_DATA } from "@/lib/ticker-data";
 
 import { getMarketData } from "@/app/actions/getMarketData";
 import LoadingSpinner from "./LoadingSpinner";
+import Sparkline from "./Sparkline";
 
 
 
 export default function MacroView() {
 
-    const [data, setData] = useState<{ [symbol: string]: { price: number; change: number; marketCap: number } }>({});
+    const [data, setData] = useState<{ [symbol: string]: { price: number; change: number; marketCap: number; sparkline: number[] } }>({});
 
     const [isLoading, setIsLoading] = useState(true);
 
@@ -54,25 +55,31 @@ export default function MacroView() {
                             const isPositive = change >= 0 && !isNeutral;
 
                             return (
-                                <div key={item.symbol} className="flex items-center justify-between p-3 bg-portal-black/40 border border-white/5 hover:border-portal-accent/30 hover:bg-white/5 transition-colors group">
-                                    {/* Name & Symbol (Linked) */}
-                                    <a
-                                        href={`https://finance.yahoo.com/quote/${item.symbol}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex flex-col w-auto shrink-0 hover:text-portal-accent transition-colors overflow-hidden"
-                                    >
-                                        <span className="font-bold text-slate-200 text-sm truncate group-hover:text-portal-accent" title={item.name}>{item.name}</span>
-                                        <span className="text-[10px] text-slate-500 font-mono group-hover:text-portal-accent/70">{item.symbol}</span>
-                                    </a>
+                                <div key={item.symbol} className="relative flex items-center py-12 px-4 bg-portal-black/40 border border-white/5 hover:border-portal-accent/30 hover:bg-white/5 transition-colors group overflow-hidden">
+                                    {/* Sparkline Underlay */}
+                                    <Sparkline data={data[item.symbol]?.sparkline || []} isPositive={isPositive} isUnderlay={true} />
 
-                                    {/* Price & Change */}
-                                    <div className="flex flex-col items-end w-28 shrink-0 ml-2">
-                                        <span className="font-mono text-white font-medium text-sm">
-                                            {item.currency === 'PTS' ? price.toFixed(2) : new Intl.NumberFormat('en-US', { style: 'currency', currency: item.currency }).format(price)}
-                                        </span>
-                                        <div className={`text-xs font-mono font-bold flex items-center ${isNeutral ? 'text-slate-500' : isPositive ? 'text-green-500' : 'text-red-500'}`}>
-                                            {Math.abs(change).toFixed(2)}%
+                                    {/* Content Row (z-10 to stay above underlay) */}
+                                    <div className="relative z-10 flex items-center w-full">
+                                        {/* 1. Info Area */}
+                                        <a
+                                            href={`https://finance.yahoo.com/quote/${item.symbol}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex flex-col flex-1 min-w-0 mr-4 hover:text-portal-accent transition-colors overflow-hidden"
+                                        >
+                                            <span className="font-bold text-slate-200 text-sm truncate group-hover:text-portal-accent" title={item.name}>{item.name}</span>
+                                            <span className="text-[10px] text-slate-500 font-mono group-hover:text-portal-accent/70">{item.symbol}</span>
+                                        </a>
+
+                                        {/* 2. Price & Change Area */}
+                                        <div className="flex flex-col items-end w-24 md:w-28 shrink-0 ml-4">
+                                            <span className="font-mono text-white font-bold text-base whitespace-nowrap">
+                                                {item.currency === 'PTS' ? price.toFixed(2) : new Intl.NumberFormat('en-US', { style: 'currency', currency: item.currency }).format(price)}
+                                            </span>
+                                            <div className={`text-xs font-mono font-bold flex items-center ${isNeutral ? 'text-slate-500' : isPositive ? 'text-green-500' : 'text-red-500'}`}>
+                                                {Math.abs(change).toFixed(2)}%
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

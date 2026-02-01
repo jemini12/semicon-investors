@@ -20,17 +20,46 @@ export async function getMarketData() {
                     marketCap?: number;
                 }
 
-                // Cast to unknown first to bypass potential library type mismatches, then to our interface
-                const results = await yahooFinance.quote(symbols) as unknown as YahooQuote[];
-
                 // Map results back to our structure
-                const mappedResults: { [symbol: string]: { price: number; change: number; marketCap: number } } = {};
+                const mappedResults: {
+                    [symbol: string]: {
+                        price: number;
+                        change: number;
+                        marketCap: number;
+                        sparkline: number[];
+                    }
+                } = {};
 
-                results.forEach((quote: YahooQuote) => {
+                // Fetch quotes for basic data
+                const quotes = await yahooFinance.quote(symbols) as unknown as YahooQuote[];
+
+                // Fetch chart data for sparklines (1 month)
+                // We use a simplified chart fetch for all symbols
+                const chartPromises = symbols.map(async (symbol) => {
+                    try {
+                        const chartData = await yahooFinance.chart(symbol, {
+                            period1: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+                            interval: '1d',
+                        });
+                        return {
+                            symbol,
+                            prices: chartData.quotes?.map(q => q.close).filter((p): p is number => typeof p === 'number' && p !== null) || []
+                        };
+                    } catch (e) {
+                        console.error(`Failed to fetch chart for ${symbol}:`, e);
+                        return { symbol, prices: [] };
+                    }
+                });
+
+                const allCharts = await Promise.all(chartPromises);
+
+                quotes.forEach((quote: YahooQuote) => {
+                    const chart = allCharts.find(c => c.symbol === quote.symbol);
                     mappedResults[quote.symbol] = {
                         price: quote.regularMarketPrice || 0,
                         change: quote.regularMarketChangePercent || 0,
                         marketCap: quote.marketCap || 0,
+                        sparkline: chart?.prices || [],
                     };
                 });
                 return mappedResults;
@@ -39,8 +68,8 @@ export async function getMarketData() {
                 return null;
             }
         },
-        ['market-data-all-v2'],
-        { revalidate: 60 } // 1 minute for faster updates during dev
+        ['market-data-with-sparklines-v1'],
+        { revalidate: 3600 } // 1 hour for historical data (more aggressive caching)
     );
 
     return getCachedData();
