@@ -63,7 +63,7 @@ export default function SemiconductorSectorView() {
                                             const isPositive = change >= 0 && !isNeutral;
 
                                             return (
-                                                <div key={item.symbol} className="relative flex items-center py-8 px-4 bg-portal-black/40 border border-white/5 hover:border-portal-accent/30 hover:bg-white/5 transition-colors group overflow-hidden">
+                                                <div key={item.symbol} className="relative flex items-center py-6 px-4 bg-portal-black/40 border border-white/5 hover:border-portal-accent/30 hover:bg-white/5 transition-colors group overflow-hidden">
                                                     {/* Sparkline Underlay */}
                                                     <Sparkline data={data[item.symbol]?.sparkline || []} isPositive={isPositive} isUnderlay={true} />
 

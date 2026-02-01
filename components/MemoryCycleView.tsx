@@ -48,7 +48,7 @@ export default function MemoryCycleView() {
                         const isPositive = change >= 0 && !isNeutral;
 
                         return (
-                            <div key={item.symbol} className="relative bg-portal-black/50 py-10 px-6 border-t-2 border-white/10 hover:border-portal-accent transition-colors overflow-hidden group">
+                            <div key={item.symbol} className="relative bg-portal-black/50 py-8 px-6 border-t-2 border-white/10 hover:border-portal-accent transition-colors overflow-hidden group">
                                 {/* Sparkline Underlay */}
                                 <Sparkline data={data[item.symbol]?.sparkline || []} isPositive={isPositive} isUnderlay={true} />
 

@@ -49,7 +49,7 @@ export default function SectorHeatmap() {
                                     <div
                                         key={item.symbol}
                                         className={`
-                      relative overflow-hidden py-6 px-6 transition-all hover:bg-white/5 cursor-pointer group border-l-4
+                      relative overflow-hidden py-4 px-6 transition-all hover:bg-white/5 cursor-pointer group border-l-4
                       ${isNeutral ? 'border-gray-500 bg-gray-500/5' : change > 0 ? 'border-green-500 bg-green-500/5' : 'border-red-500 bg-red-500/5'}
                     `}
                                     >
