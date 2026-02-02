@@ -16,18 +16,19 @@ export default function SemiconductorSectorView() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchData = async (isInitial = false) => {
             try {
+                if (isInitial) setIsLoading(true);
                 const realData = await getMarketData();
                 if (realData) setData(realData);
             } catch (e) {
                 console.error(e);
             } finally {
-                setIsLoading(false);
+                if (isInitial) setIsLoading(false);
             }
         };
-        fetchData();
-        const interval = setInterval(fetchData, 10000);
+        fetchData(true); // Initial load with loading state
+        const interval = setInterval(() => fetchData(false), 10000); // Polling without loading state
         return () => clearInterval(interval);
     }, []);
 
