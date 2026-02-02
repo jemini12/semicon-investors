@@ -4,45 +4,92 @@ import { useEffect, useState } from 'react';
 import SemiconductorSectorView from '@/components/SemiconductorSectorView';
 import MacroView from '@/components/MacroView';
 import MarketInsightsPanel from '@/components/MarketInsightsPanel';
-import { getMarketData } from '@/app/actions/getMarketData';
+import { getMarketQuotes, getSparklines } from '@/app/actions/getMarketData';
+
+// Define the type here to match the action return type
+type MarketData = {
+    [symbol: string]: {
+        price: number;
+        change: number;
+        marketCap: number;
+        sparkline: number[]
+    }
+};
 
 export default function Home() {
-    const [marketData, setMarketData] = useState<{ [symbol: string]: { price: number; change: number; marketCap: number; sparkline: number[] } } | null>(null);
+    const [marketData, setMarketData] = useState<MarketData | null>(null);
     const [isLoadingMarket, setIsLoadingMarket] = useState(true);
 
-    // Fetch market data once at page level
+    // Progressive loading strategy
     useEffect(() => {
-        const fetchData = async (isInitial = false) => {
+        const loadData = async () => {
+            const startTime = performance.now();
+
+            // 1. FAST: Get quotes immediately
             try {
-                const startTime = performance.now();
-                console.log('[Client] 🔄 Starting market data fetch...', { isInitial, time: new Date().toISOString() });
-                if (isInitial) setIsLoadingMarket(true);
+                console.log('[Client] 🚀 Fetching fast quotes...');
+                if (!marketData) setIsLoadingMarket(true);
 
-                const data = await getMarketData();
-                const fetchDuration = performance.now() - startTime;
-
-                console.log('[Client] ✅ Market data received!', {
-                    hasData: !!data,
-                    duration: `${fetchDuration.toFixed(0)}ms`,
-                    time: new Date().toISOString()
-                });
-
-                if (data) {
-                    setMarketData(data);
-                    console.log('[Client] 📊 State updated with market data');
+                const quotes = await getMarketQuotes();
+                if (quotes) {
+                    setMarketData(prev => ({ ...(prev || {}), ...quotes }));
+                    setIsLoadingMarket(false); // Stop spinner immediately!
+                    console.log(`[Client] ✅ Quotes loaded in ${(performance.now() - startTime).toFixed(0)}ms`);
                 }
             } catch (e) {
-                console.error('[Client] ❌ Failed to fetch market data:', e);
-            } finally {
-                if (isInitial) {
-                    console.log('[Client] 🏁 Setting isLoading = false', { time: new Date().toISOString() });
-                    setIsLoadingMarket(false);
+                console.error('Failed to load quotes:', e);
+                setIsLoadingMarket(false);
+            }
+
+            // 2. SLOW: Get sparklines in background
+            try {
+                console.log('[Client] 📉 Fetching background sparklines...');
+                const sparklines = await getSparklines();
+
+                if (sparklines) {
+                    setMarketData(prev => {
+                        if (!prev) return sparklines;
+                        // Deep merge only sparklines
+                        const merged = { ...prev };
+                        Object.keys(sparklines).forEach(key => {
+                            if (merged[key]) {
+                                merged[key] = { ...merged[key], sparkline: sparklines[key].sparkline };
+                            }
+                        });
+                        return merged;
+                    });
+                    console.log(`[Client] ✅ Sparklines loaded in ${(performance.now() - startTime).toFixed(0)}ms`);
                 }
+            } catch (e) {
+                console.error('Failed to load sparklines:', e);
             }
         };
 
-        fetchData(true); // Initial load
-        const interval = setInterval(() => fetchData(false), 10000); // Poll every 10s
+        // Initial load
+        loadData();
+
+        // Poll only quotes frequently (every 10s)
+        const interval = setInterval(async () => {
+            const quotes = await getMarketQuotes();
+            if (quotes) {
+                setMarketData(prev => {
+                    const merged = { ...(prev || {}) };
+                    Object.keys(quotes).forEach(key => {
+                        if (merged[key]) {
+                            // Preserve existing sparklines while updating price
+                            merged[key] = {
+                                ...quotes[key],
+                                sparkline: merged[key].sparkline
+                            };
+                        } else {
+                            merged[key] = quotes[key];
+                        }
+                    });
+                    return merged;
+                });
+            }
+        }, 10000);
+
         return () => clearInterval(interval);
     }, []);
 
