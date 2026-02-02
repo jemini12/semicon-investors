@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { generateMarketInsights, MarketInsights } from "@/app/actions/generateMarketInsights";
+import { streamMacroAnalysis, streamSemiconductorAnalysis, streamHighlightAnalysis } from "@/app/actions/generateMarketInsights";
 
 // Helper function to enhance text with better spacing
 function formatAnalysisText(text: string) {
@@ -16,27 +16,95 @@ function formatAnalysisText(text: string) {
 }
 
 export default function MarketInsightsPanel() {
-    const [insights, setInsights] = useState<MarketInsights | null>(null);
-    const [isLoading, setIsLoading] = useState(true);
+    const [macroText, setMacroText] = useState("");
+    const [semiText, setSemiText] = useState("");
+    const [highlightText, setHighlightText] = useState("");
+
+    const [macroLoading, setMacroLoading] = useState(true);
+    const [semiLoading, setSemiLoading] = useState(true);
+    const [highlightLoading, setHighlightLoading] = useState(true);
+
     const [error, setError] = useState<string | null>(null);
 
+    // Stream macro analysis
     useEffect(() => {
-        const fetchInsights = async () => {
+        const fetchMacro = async () => {
             try {
-                setIsLoading(true);
-                const data = await generateMarketInsights();
-                setInsights(data);
-                setError(null);
+                setMacroLoading(true);
+                const stream = await streamMacroAnalysis();
+                const reader = stream.getReader();
+                const decoder = new TextDecoder();
+
+                let text = '';
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    text += decoder.decode(value);
+                    setMacroText(text);
+                }
             } catch (e) {
-                console.error('Failed to generate insights:', e);
-                setError('시장 인사이트를 생성할 수 없습니다.');
+                console.error('Failed to stream macro analysis:', e);
+                setError('거시경제 분석을 생성할 수 없습니다.');
             } finally {
-                setIsLoading(false);
+                setMacroLoading(false);
             }
         };
-
-        fetchInsights();
+        fetchMacro();
     }, []);
+
+    // Stream semiconductor analysis
+    useEffect(() => {
+        const fetchSemi = async () => {
+            try {
+                setSemiLoading(true);
+                const stream = await streamSemiconductorAnalysis();
+                const reader = stream.getReader();
+                const decoder = new TextDecoder();
+
+                let text = '';
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    text += decoder.decode(value);
+                    setSemiText(text);
+                }
+            } catch (e) {
+                console.error('Failed to stream semiconductor analysis:', e);
+                setError('반도체 분석을 생성할 수 없습니다.');
+            } finally {
+                setSemiLoading(false);
+            }
+        };
+        fetchSemi();
+    }, []);
+
+    // Stream highlight analysis
+    useEffect(() => {
+        const fetchHighlight = async () => {
+            try {
+                setHighlightLoading(true);
+                const stream = await streamHighlightAnalysis();
+                const reader = stream.getReader();
+                const decoder = new TextDecoder();
+
+                let text = '';
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    text += decoder.decode(value);
+                    setHighlightText(text);
+                }
+            } catch (e) {
+                console.error('Failed to stream highlight analysis:', e);
+                setError('주목 종목 분석을 생성할 수 없습니다.');
+            } finally {
+                setHighlightLoading(false);
+            }
+        };
+        fetchHighlight();
+    }, []);
+
+    const anyLoading = macroLoading || semiLoading || highlightLoading;
 
     if (error) {
         return (
@@ -50,7 +118,7 @@ export default function MarketInsightsPanel() {
         <div className="w-full p-6 bg-portal-gray/30 border border-white/5 backdrop-blur-sm">
             <div className="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
                 <h3 className="text-xl font-bold text-white tracking-widest uppercase">Market Analysis</h3>
-                {isLoading && (
+                {anyLoading && (
                     <div className="flex items-center space-x-2">
                         <div className="animate-spin rounded-full h-4 w-4 border-2 border-portal-accent border-t-transparent"></div>
                         <span className="text-xs text-slate-400">AI 분석 중...</span>
@@ -65,17 +133,17 @@ export default function MarketInsightsPanel() {
                         <span className="mr-2 text-xl">🌍</span>
                         Macro Environment
                     </h3>
-                    {isLoading ? (
+                    {macroLoading && !macroText ? (
                         <div className="space-y-3 animate-pulse">
                             <div className="h-3 bg-white/5 rounded"></div>
                             <div className="h-3 bg-white/5 rounded"></div>
                             <div className="h-3 bg-white/5 rounded w-5/6"></div>
                         </div>
-                    ) : insights ? (
+                    ) : (
                         <div className="text-base text-slate-200 leading-relaxed font-normal">
-                            {formatAnalysisText(insights.macroAnalysis)}
+                            {formatAnalysisText(macroText)}
                         </div>
-                    ) : null}
+                    )}
                 </div>
 
                 {/* Semiconductor Analysis */}
@@ -84,17 +152,17 @@ export default function MarketInsightsPanel() {
                         <span className="mr-2 text-xl">💾</span>
                         Semiconductor Sector
                     </h3>
-                    {isLoading ? (
+                    {semiLoading && !semiText ? (
                         <div className="space-y-3 animate-pulse">
                             <div className="h-3 bg-white/5 rounded"></div>
                             <div className="h-3 bg-white/5 rounded"></div>
                             <div className="h-3 bg-white/5 rounded w-5/6"></div>
                         </div>
-                    ) : insights ? (
+                    ) : (
                         <div className="text-base text-slate-200 leading-relaxed font-normal">
-                            {formatAnalysisText(insights.semiconductorAnalysis)}
+                            {formatAnalysisText(semiText)}
                         </div>
-                    ) : null}
+                    )}
                 </div>
 
                 {/* Top Companies */}
@@ -103,17 +171,17 @@ export default function MarketInsightsPanel() {
                         <span className="mr-2 text-xl">⭐</span>
                         Highlight
                     </h3>
-                    {isLoading ? (
+                    {highlightLoading && !highlightText ? (
                         <div className="space-y-3 animate-pulse">
                             <div className="h-3 bg-white/5 rounded"></div>
                             <div className="h-3 bg-white/5 rounded"></div>
                             <div className="h-3 bg-white/5 rounded w-5/6"></div>
                         </div>
-                    ) : insights ? (
+                    ) : (
                         <div className="text-base text-slate-200 leading-relaxed font-normal whitespace-pre-line">
-                            {formatAnalysisText(insights.topCompanies)}
+                            {formatAnalysisText(highlightText)}
                         </div>
-                    ) : null}
+                    )}
                 </div>
             </div>
         </div>
