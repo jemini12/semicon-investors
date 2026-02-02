@@ -122,12 +122,18 @@ async function generateMarketInsightsInternal(): Promise<MarketInsights> {
     };
 }
 
-// Export cached version with 1 hour revalidation
-export const generateMarketInsights = unstable_cache(
-    generateMarketInsightsInternal,
-    ['market-insights'],
-    {
-        revalidate: 3600, // Cache for 1 hour
-        tags: ['market-insights'],
-    }
-);
+// Export cached version with time-based cache key for hourly refresh
+export async function generateMarketInsights(): Promise<MarketInsights> {
+    // Create a cache key that changes every hour
+    const currentHour = Math.floor(Date.now() / (1000 * 60 * 60));
+
+    const getCachedInsights = unstable_cache(
+        generateMarketInsightsInternal,
+        ['market-insights', currentHour.toString()],
+        {
+            tags: ['market-insights'],
+        }
+    );
+
+    return getCachedInsights();
+}
