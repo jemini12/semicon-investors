@@ -1,0 +1,1687 @@
+
+> semicon-investors@0.1.0 dev
+> next dev
+
+⚠ Port 3000 is in use by process 41070, using available port 3001 instead.
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.0.51:3001
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 659ms
+Error: Failed to find Server Action "00bc43c21df48b50c248bf75df75062b70d2311921". This request might be from an older or newer deployment.
+Read more: https://nextjs.org/docs/messages/failed-to-find-server-action
+    at ignore-listed frames
+ POST / 404 in 2.7s (compile: 2.5s, render: 186ms)
+ GET / 200 in 203ms (compile: 4ms, render: 199ms)
+ GET / 200 in 40ms (compile: 3ms, render: 37ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+[getMarketData] Fetching quotes batch...
+Please consider completing the survey at https://bit.ly/yahoo-finance-api-feedback if you haven't already; for more info see https://github.com/gadicc/yahoo-finance2/issues/764#issuecomment-2056623851.  This will only be shown once, but you can suppress this message in future with `new YahooFinance({ suppressNotices: ['yahooSurvey'] })`.
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+[getMarketData] Fetching quotes batch...
+[getMarketData] Quotes fetched in 1163ms for 63 symbols
+[getMarketData] Fetching sparkline chart data...
+[getMarketData] Quotes fetched in 1273ms for 63 symbols
+[getMarketData] Fetching sparkline chart data...
+  [005930.KS] Chart fetched in 243ms
+  [000660.KS] Chart fetched in 381ms
+  [108320.KQ] Chart fetched in 386ms
+  [000990.KS] Chart fetched in 392ms
+  [005930.KS] Chart fetched in 359ms
+  [000660.KS] Chart fetched in 362ms
+  [042700.KS] Chart fetched in 485ms
+[getMarketData] Batch 1/13 completed in 488ms
+  [042700.KS] Chart fetched in 422ms
+  [000990.KS] Chart fetched in 544ms
+  [108320.KQ] Chart fetched in 596ms
+[getMarketData] Batch 1/13 completed in 596ms
+  [403870.KQ] Chart fetched in 223ms
+  [036930.KQ] Chart fetched in 274ms
+  [403870.KQ] Chart fetched in 138ms
+  [240810.KQ] Chart fetched in 369ms
+  [036930.KQ] Chart fetched in 203ms
+  [084370.KQ] Chart fetched in 434ms
+  [029460.KS] Chart fetched in 460ms
+[getMarketData] Batch 2/13 completed in 460ms
+  [240810.KQ] Chart fetched in 405ms
+  [029460.KS] Chart fetched in 480ms
+  [281820.KS] Chart fetched in 229ms
+  [058470.KQ] Chart fetched in 431ms
+  [039030.KQ] Chart fetched in 472ms
+  [095340.KQ] Chart fetched in 482ms
+  [084370.KQ] Chart fetched in 755ms
+[getMarketData] Batch 2/13 completed in 755ms
+  [232140.KQ] Chart fetched in 644ms
+[getMarketData] Batch 3/13 completed in 647ms
+  [095340.KQ] Chart fetched in 209ms
+  [281820.KS] Chart fetched in 291ms
+  [058470.KQ] Chart fetched in 287ms
+  [039030.KQ] Chart fetched in 299ms
+  [232140.KQ] Chart fetched in 305ms
+[getMarketData] Batch 3/13 completed in 313ms
+  [357780.KQ] Chart fetched in 367ms
+  [067310.KQ] Chart fetched in 370ms
+  [067310.KQ] Chart fetched in 282ms
+  [357780.KQ] Chart fetched in 346ms
+  [281740.KQ] Chart fetched in 505ms
+  [005290.KQ] Chart fetched in 536ms
+  [005290.KQ] Chart fetched in 411ms
+  [101490.KQ] Chart fetched in 604ms
+[getMarketData] Batch 4/13 completed in 606ms
+  [281740.KQ] Chart fetched in 576ms
+  [101490.KQ] Chart fetched in 614ms
+[getMarketData] Batch 4/13 completed in 615ms
+  [009150.KS] Chart fetched in 246ms
+  [064760.KQ] Chart fetched in 255ms
+  [MU] Chart fetched in 389ms
+  [NVDA] Chart fetched in 400ms
+  [MU] Chart fetched in 295ms
+  [AMD] Chart fetched in 467ms
+[getMarketData] Batch 5/13 completed in 467ms
+  [064760.KQ] Chart fetched in 335ms
+  [NVDA] Chart fetched in 356ms
+  [009150.KS] Chart fetched in 487ms
+  [AMD] Chart fetched in 520ms
+[getMarketData] Batch 5/13 completed in 520ms
+  [AVGO] Chart fetched in 272ms
+  [QCOM] Chart fetched in 300ms
+  [AVGO] Chart fetched in 145ms
+  [QCOM] Chart fetched in 203ms
+  [ARM] Chart fetched in 440ms
+  [TSM] Chart fetched in 520ms
+  [ARM] Chart fetched in 440ms
+  [INTC] Chart fetched in 478ms
+  [INTC] Chart fetched in 744ms
+[getMarketData] Batch 6/13 completed in 745ms
+  [TSM] Chart fetched in 558ms
+[getMarketData] Batch 6/13 completed in 559ms
+  [ASML] Chart fetched in 247ms
+  [LRCX] Chart fetched in 250ms
+  [AMAT] Chart fetched in 252ms
+  [KLAC] Chart fetched in 278ms
+  [ASML] Chart fetched in 282ms
+  [KLAC] Chart fetched in 341ms
+  [TER] Chart fetched in 451ms
+  [TER] Chart fetched in 483ms
+[getMarketData] Batch 7/13 completed in 484ms
+  [LRCX] Chart fetched in 476ms
+  [AMAT] Chart fetched in 483ms
+[getMarketData] Batch 7/13 completed in 484ms
+  [ENTG] Chart fetched in 237ms
+  [NXPI] Chart fetched in 266ms
+  [ADI] Chart fetched in 335ms
+  [ENTG] Chart fetched in 315ms
+  [TXN] Chart fetched in 354ms
+  [ADI] Chart fetched in 387ms
+  [MCHP] Chart fetched in 509ms
+[getMarketData] Batch 8/13 completed in 511ms
+  [NXPI] Chart fetched in 558ms
+  [TXN] Chart fetched in 565ms
+  [MCHP] Chart fetched in 641ms
+[getMarketData] Batch 8/13 completed in 643ms
+  [ON] Chart fetched in 235ms
+  [SWKS] Chart fetched in 314ms
+  [MRVL] Chart fetched in 316ms
+  [QRVO] Chart fetched in 374ms
+  [ON] Chart fetched in 221ms
+  [QRVO] Chart fetched in 280ms
+  [MPWR] Chart fetched in 469ms
+[getMarketData] Batch 9/13 completed in 473ms
+  [MPWR] Chart fetched in 347ms
+  [MRVL] Chart fetched in 391ms
+  [SWKS] Chart fetched in 446ms
+[getMarketData] Batch 9/13 completed in 446ms
+  [ALGM] Chart fetched in 218ms
+  [WOLF] Chart fetched in 252ms
+  [RMBS] Chart fetched in 302ms
+  [LSCC] Chart fetched in 349ms
+  [COHR] Chart fetched in 438ms
+[getMarketData] Batch 10/13 completed in 438ms
+  [ALGM] Chart fetched in 335ms
+  [WOLF] Chart fetched in 389ms
+  [RMBS] Chart fetched in 438ms
+  [LSCC] Chart fetched in 520ms
+  [COHR] Chart fetched in 553ms
+[getMarketData] Batch 10/13 completed in 554ms
+  [AMKR] Chart fetched in 310ms
+  [GFS] Chart fetched in 353ms
+  [AMKR] Chart fetched in 162ms
+  [DX-Y.NYB] Chart fetched in 440ms
+  [GFS] Chart fetched in 223ms
+  [^TNX] Chart fetched in 543ms
+  [DX-Y.NYB] Chart fetched in 405ms
+  [KRW=X] Chart fetched in 445ms
+  [^TNX] Chart fetched in 510ms
+[getMarketData] Batch 11/13 completed in 511ms
+  [KRW=X] Chart fetched in 764ms
+[getMarketData] Batch 11/13 completed in 764ms
+  [^KS11] Chart fetched in 220ms
+  [^NDX] Chart fetched in 222ms
+  [^GSPC] Chart fetched in 224ms
+  [^SOX] Chart fetched in 225ms
+  [CL=F] Chart fetched in 435ms
+[getMarketData] Batch 12/13 completed in 435ms
+  [^GSPC] Chart fetched in 437ms
+  [^KS11] Chart fetched in 440ms
+  [^SOX] Chart fetched in 450ms
+  [CL=F] Chart fetched in 495ms
+  [^NDX] Chart fetched in 652ms
+[getMarketData] Batch 12/13 completed in 653ms
+  [GC=F] Chart fetched in 225ms
+  [HG=F] Chart fetched in 254ms
+  [RIO] Chart fetched in 320ms
+[getMarketData] Batch 13/13 completed in 321ms
+[getMarketData] All sparkline charts fetched in 6757ms
+  [GC=F] Chart fetched in 219ms
+  [HG=F] Chart fetched in 234ms
+  [RIO] Chart fetched in 325ms
+[getMarketData] Batch 13/13 completed in 326ms
+[getMarketData] All sparkline charts fetched in 7065ms
+ POST / 200 in 23.3s (compile: 4ms, render: 23.3s)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+[getMarketData] Fetching quotes batch...
+[getMarketData] Quotes fetched in 643ms for 63 symbols
+[getMarketData] Fetching sparkline chart data...
+  [005930.KS] Chart fetched in 243ms
+  [000990.KS] Chart fetched in 363ms
+  [108320.KQ] Chart fetched in 377ms
+  [000660.KS] Chart fetched in 386ms
+  [042700.KS] Chart fetched in 602ms
+[getMarketData] Batch 1/13 completed in 604ms
+  [240810.KQ] Chart fetched in 222ms
+  [403870.KQ] Chart fetched in 223ms
+  [084370.KQ] Chart fetched in 243ms
+  [036930.KQ] Chart fetched in 253ms
+  [029460.KS] Chart fetched in 451ms
+[getMarketData] Batch 2/13 completed in 452ms
+  [281820.KS] Chart fetched in 229ms
+  [095340.KQ] Chart fetched in 238ms
+  [039030.KQ] Chart fetched in 244ms
+  [058470.KQ] Chart fetched in 253ms
+  [232140.KQ] Chart fetched in 448ms
+[getMarketData] Batch 3/13 completed in 449ms
+  [281740.KQ] Chart fetched in 219ms
+  [357780.KQ] Chart fetched in 225ms
+  [067310.KQ] Chart fetched in 244ms
+  [005290.KQ] Chart fetched in 247ms
+  [101490.KQ] Chart fetched in 449ms
+[getMarketData] Batch 4/13 completed in 451ms
+  [NVDA] Chart fetched in 232ms
+  [064760.KQ] Chart fetched in 237ms
+  [009150.KS] Chart fetched in 249ms
+  [MU] Chart fetched in 254ms
+  [AMD] Chart fetched in 449ms
+[getMarketData] Batch 5/13 completed in 449ms
+  [ARM] Chart fetched in 220ms
+  [AVGO] Chart fetched in 243ms
+  [QCOM] Chart fetched in 261ms
+  [INTC] Chart fetched in 264ms
+  [TSM] Chart fetched in 466ms
+[getMarketData] Batch 6/13 completed in 466ms
+  [LRCX] Chart fetched in 226ms
+  [ASML] Chart fetched in 240ms
+  [KLAC] Chart fetched in 242ms
+  [AMAT] Chart fetched in 256ms
+  [TER] Chart fetched in 459ms
+[getMarketData] Batch 7/13 completed in 461ms
+  [ENTG] Chart fetched in 235ms
+  [NXPI] Chart fetched in 236ms
+  [ADI] Chart fetched in 236ms
+  [TXN] Chart fetched in 307ms
+ POST / 200 in 27.5s (compile: 11ms, render: 27.5s)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+[getMarketData] Fetching quotes batch...
+  [MCHP] Chart fetched in 481ms
+[getMarketData] Batch 8/13 completed in 481ms
+  [ON] Chart fetched in 223ms
+  [SWKS] Chart fetched in 241ms
+[getMarketData] Quotes fetched in 502ms for 63 symbols
+[getMarketData] Fetching sparkline chart data...
+  [QRVO] Chart fetched in 445ms
+  [MPWR] Chart fetched in 475ms
+  [MRVL] Chart fetched in 529ms
+[getMarketData] Batch 9/13 completed in 531ms
+  [005930.KS] Chart fetched in 242ms
+  [000660.KS] Chart fetched in 277ms
+  [000990.KS] Chart fetched in 287ms
+  [108320.KQ] Chart fetched in 334ms
+  [042700.KS] Chart fetched in 481ms
+[getMarketData] Batch 1/13 completed in 483ms
+  [ALGM] Chart fetched in 387ms
+  [WOLF] Chart fetched in 398ms
+  [RMBS] Chart fetched in 448ms
+  [LSCC] Chart fetched in 592ms
+  [COHR] Chart fetched in 602ms
+[getMarketData] Batch 10/13 completed in 602ms
+  [403870.KQ] Chart fetched in 247ms
+  [036930.KQ] Chart fetched in 317ms
+  [240810.KQ] Chart fetched in 442ms
+  [084370.KQ] Chart fetched in 461ms
+  [029460.KS] Chart fetched in 483ms
+[getMarketData] Batch 2/13 completed in 483ms
+  [AMKR] Chart fetched in 313ms
+  [GFS] Chart fetched in 428ms
+  [DX-Y.NYB] Chart fetched in 462ms
+  [KRW=X] Chart fetched in 470ms
+  [^TNX] Chart fetched in 527ms
+[getMarketData] Batch 11/13 completed in 528ms
+  [281820.KS] Chart fetched in 400ms
+  [058470.KQ] Chart fetched in 441ms
+  [039030.KQ] Chart fetched in 459ms
+  [095340.KQ] Chart fetched in 502ms
+  [232140.KQ] Chart fetched in 616ms
+[getMarketData] Batch 3/13 completed in 616ms
+  [^GSPC] Chart fetched in 384ms
+  [^KS11] Chart fetched in 401ms
+  [^SOX] Chart fetched in 466ms
+  [^NDX] Chart fetched in 566ms
+  [CL=F] Chart fetched in 597ms
+[getMarketData] Batch 12/13 completed in 597ms
+  [067310.KQ] Chart fetched in 299ms
+  [357780.KQ] Chart fetched in 338ms
+  [005290.KQ] Chart fetched in 466ms
+  [281740.KQ] Chart fetched in 471ms
+  [101490.KQ] Chart fetched in 540ms
+[getMarketData] Batch 4/13 completed in 541ms
+  [GC=F] Chart fetched in 300ms
+  [HG=F] Chart fetched in 433ms
+  [RIO] Chart fetched in 464ms
+[getMarketData] Batch 13/13 completed in 465ms
+[getMarketData] All sparkline charts fetched in 6537ms
+  [064760.KQ] Chart fetched in 245ms
+  [MU] Chart fetched in 402ms
+  [NVDA] Chart fetched in 410ms
+  [AMD] Chart fetched in 459ms
+  [009150.KS] Chart fetched in 562ms
+[getMarketData] Batch 5/13 completed in 563ms
+  [ARM] Chart fetched in 216ms
+  [AVGO] Chart fetched in 235ms
+  [QCOM] Chart fetched in 257ms
+  [INTC] Chart fetched in 271ms
+  [TSM] Chart fetched in 449ms
+[getMarketData] Batch 6/13 completed in 450ms
+  [ASML] Chart fetched in 239ms
+  [AMAT] Chart fetched in 252ms
+  [KLAC] Chart fetched in 262ms
+  [TER] Chart fetched in 480ms
+  [LRCX] Chart fetched in 532ms
+[getMarketData] Batch 7/13 completed in 532ms
+  [NXPI] Chart fetched in 226ms
+  [ENTG] Chart fetched in 229ms
+  [ADI] Chart fetched in 242ms
+  [TXN] Chart fetched in 295ms
+  [MCHP] Chart fetched in 495ms
+[getMarketData] Batch 8/13 completed in 496ms
+  [QRVO] Chart fetched in 222ms
+  [ON] Chart fetched in 225ms
+  [SWKS] Chart fetched in 230ms
+  [MRVL] Chart fetched in 240ms
+  [MPWR] Chart fetched in 459ms
+[getMarketData] Batch 9/13 completed in 462ms
+  [RMBS] Chart fetched in 217ms
+  [ALGM] Chart fetched in 221ms
+  [LSCC] Chart fetched in 220ms
+  [COHR] Chart fetched in 443ms
+  [WOLF] Chart fetched in 515ms
+[getMarketData] Batch 10/13 completed in 516ms
+  [KRW=X] Chart fetched in 219ms
+  [GFS] Chart fetched in 220ms
+  [DX-Y.NYB] Chart fetched in 222ms
+  [AMKR] Chart fetched in 222ms
+  [^TNX] Chart fetched in 438ms
+[getMarketData] Batch 11/13 completed in 438ms
+  [^KS11] Chart fetched in 214ms
+  [^GSPC] Chart fetched in 216ms
+  [^NDX] Chart fetched in 220ms
+  [^SOX] Chart fetched in 221ms
+  [CL=F] Chart fetched in 431ms
+[getMarketData] Batch 12/13 completed in 431ms
+  [GC=F] Chart fetched in 219ms
+  [HG=F] Chart fetched in 219ms
+  [RIO] Chart fetched in 267ms
+[getMarketData] Batch 13/13 completed in 269ms
+[getMarketData] All sparkline charts fetched in 6281ms
+ POST / 200 in 19.3s (compile: 15ms, render: 19.3s)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+[getMarketData] Fetching quotes batch...
+[getMarketData] Quotes fetched in 604ms for 63 symbols
+[getMarketData] Fetching sparkline chart data...
+  [005930.KS] Chart fetched in 239ms
+  [000660.KS] Chart fetched in 368ms
+  [108320.KQ] Chart fetched in 370ms
+  [000990.KS] Chart fetched in 381ms
+ POST / 200 in 24.8s (compile: 39ms, render: 24.8s)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+[getMarketData] Fetching quotes batch...
+  [042700.KS] Chart fetched in 595ms
+[getMarketData] Batch 1/13 completed in 595ms
+  [403870.KQ] Chart fetched in 235ms
+  [240810.KQ] Chart fetched in 248ms
+[getMarketData] Quotes fetched in 375ms for 63 symbols
+[getMarketData] Fetching sparkline chart data...
+  [084370.KQ] Chart fetched in 475ms
+  [029460.KS] Chart fetched in 478ms
+  [036930.KQ] Chart fetched in 556ms
+[getMarketData] Batch 2/13 completed in 558ms
+  [005930.KS] Chart fetched in 259ms
+  [000990.KS] Chart fetched in 363ms
+  [000660.KS] Chart fetched in 370ms
+  [108320.KQ] Chart fetched in 426ms
+  [042700.KS] Chart fetched in 501ms
+[getMarketData] Batch 1/13 completed in 503ms
+  [281820.KS] Chart fetched in 401ms
+  [058470.KQ] Chart fetched in 411ms
+  [039030.KQ] Chart fetched in 473ms
+  [095340.KQ] Chart fetched in 535ms
+  [240810.KQ] Chart fetched in 293ms
+  [232140.KQ] Chart fetched in 623ms
+[getMarketData] Batch 3/13 completed in 624ms
+  [403870.KQ] Chart fetched in 330ms
+  [036930.KQ] Chart fetched in 409ms
+  [084370.KQ] Chart fetched in 532ms
+  [029460.KS] Chart fetched in 568ms
+[getMarketData] Batch 2/13 completed in 568ms
+  [067310.KQ] Chart fetched in 267ms
+  [357780.KQ] Chart fetched in 313ms
+  [005290.KQ] Chart fetched in 462ms
+  [281740.KQ] Chart fetched in 470ms
+  [101490.KQ] Chart fetched in 497ms
+[getMarketData] Batch 4/13 completed in 497ms
+  [281820.KS] Chart fetched in 295ms
+  [058470.KQ] Chart fetched in 464ms
+  [039030.KQ] Chart fetched in 472ms
+  [095340.KQ] Chart fetched in 487ms
+  [232140.KQ] Chart fetched in 513ms
+[getMarketData] Batch 3/13 completed in 514ms
+  [064760.KQ] Chart fetched in 474ms
+  [009150.KS] Chart fetched in 475ms
+  [MU] Chart fetched in 488ms
+  [NVDA] Chart fetched in 506ms
+  [067310.KQ] Chart fetched in 275ms
+  [357780.KQ] Chart fetched in 284ms
+  [005290.KQ] Chart fetched in 299ms
+  [281740.KQ] Chart fetched in 331ms
+  [AMD] Chart fetched in 694ms
+[getMarketData] Batch 5/13 completed in 695ms
+  [101490.KQ] Chart fetched in 521ms
+[getMarketData] Batch 4/13 completed in 521ms
+  [AVGO] Chart fetched in 239ms
+  [QCOM] Chart fetched in 250ms
+  [INTC] Chart fetched in 260ms
+  [ARM] Chart fetched in 312ms
+  [TSM] Chart fetched in 525ms
+[getMarketData] Batch 6/13 completed in 532ms
+  [064760.KQ] Chart fetched in 452ms
+  [009150.KS] Chart fetched in 483ms
+  [MU] Chart fetched in 502ms
+  [NVDA] Chart fetched in 637ms
+  [AMD] Chart fetched in 671ms
+[getMarketData] Batch 5/13 completed in 672ms
+  [AMAT] Chart fetched in 296ms
+  [LRCX] Chart fetched in 420ms
+  [ASML] Chart fetched in 460ms
+  [KLAC] Chart fetched in 469ms
+  [TER] Chart fetched in 531ms
+[getMarketData] Batch 7/13 completed in 532ms
+  [QCOM] Chart fetched in 483ms
+  [INTC] Chart fetched in 509ms
+  [ARM] Chart fetched in 520ms
+  [AVGO] Chart fetched in 722ms
+  [TSM] Chart fetched in 735ms
+[getMarketData] Batch 6/13 completed in 735ms
+  [ENTG] Chart fetched in 436ms
+  [TXN] Chart fetched in 510ms
+  [ADI] Chart fetched in 662ms
+  [NXPI] Chart fetched in 665ms
+  [MCHP] Chart fetched in 675ms
+[getMarketData] Batch 8/13 completed in 676ms
+  [ASML] Chart fetched in 311ms
+  [AMAT] Chart fetched in 467ms
+  [LRCX] Chart fetched in 477ms
+  [KLAC] Chart fetched in 485ms
+  [TER] Chart fetched in 552ms
+[getMarketData] Batch 7/13 completed in 553ms
+  [ON] Chart fetched in 445ms
+  [MRVL] Chart fetched in 462ms
+  [SWKS] Chart fetched in 478ms
+  [QRVO] Chart fetched in 532ms
+  [MPWR] Chart fetched in 684ms
+[getMarketData] Batch 9/13 completed in 684ms
+  [ENTG] Chart fetched in 388ms
+  [ADI] Chart fetched in 460ms
+  [TXN] Chart fetched in 473ms
+  [NXPI] Chart fetched in 603ms
+  [ALGM] Chart fetched in 300ms
+  [MCHP] Chart fetched in 675ms
+[getMarketData] Batch 8/13 completed in 676ms
+  [WOLF] Chart fetched in 321ms
+  [RMBS] Chart fetched in 444ms
+  [COHR] Chart fetched in 515ms
+  [LSCC] Chart fetched in 518ms
+[getMarketData] Batch 10/13 completed in 518ms
+  [ON] Chart fetched in 244ms
+  [MRVL] Chart fetched in 382ms
+  [QRVO] Chart fetched in 432ms
+  [SWKS] Chart fetched in 444ms
+  [MPWR] Chart fetched in 478ms
+[getMarketData] Batch 9/13 completed in 479ms
+  [AMKR] Chart fetched in 391ms
+  [GFS] Chart fetched in 433ms
+  [DX-Y.NYB] Chart fetched in 446ms
+  [KRW=X] Chart fetched in 476ms
+  [^TNX] Chart fetched in 609ms
+[getMarketData] Batch 11/13 completed in 610ms
+  [ALGM] Chart fetched in 394ms
+  [WOLF] Chart fetched in 405ms
+  [RMBS] Chart fetched in 429ms
+  [LSCC] Chart fetched in 563ms
+  [^GSPC] Chart fetched in 275ms
+  [^KS11] Chart fetched in 296ms
+  [^SOX] Chart fetched in 424ms
+  [^NDX] Chart fetched in 492ms
+  [CL=F] Chart fetched in 516ms
+[getMarketData] Batch 12/13 completed in 516ms
+  [COHR] Chart fetched in 907ms
+[getMarketData] Batch 10/13 completed in 907ms
+  [GC=F] Chart fetched in 216ms
+  [HG=F] Chart fetched in 223ms
+  [RIO] Chart fetched in 260ms
+[getMarketData] Batch 13/13 completed in 261ms
+[getMarketData] All sparkline charts fetched in 7303ms
+  [AMKR] Chart fetched in 228ms
+  [GFS] Chart fetched in 391ms
+  [DX-Y.NYB] Chart fetched in 393ms
+  [KRW=X] Chart fetched in 435ms
+  [^TNX] Chart fetched in 441ms
+[getMarketData] Batch 11/13 completed in 441ms
+  [^KS11] Chart fetched in 213ms
+  [^NDX] Chart fetched in 219ms
+  [^SOX] Chart fetched in 223ms
+  [^GSPC] Chart fetched in 228ms
+  [CL=F] Chart fetched in 427ms
+[getMarketData] Batch 12/13 completed in 428ms
+  [HG=F] Chart fetched in 217ms
+  [GC=F] Chart fetched in 220ms
+  [RIO] Chart fetched in 265ms
+[getMarketData] Batch 13/13 completed in 267ms
+[getMarketData] All sparkline charts fetched in 7265ms
+ POST / 200 in 27.4s (compile: 17ms, render: 27.4s)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 35ms (compile: 18ms, render: 17ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 2ms, render: 9ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 5ms (compile: 1539µs, render: 4ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 16ms (compile: 7ms, render: 9ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 5ms (compile: 1505µs, render: 3ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 6ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 5ms (compile: 1248µs, render: 4ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 7ms (compile: 1972µs, render: 5ms)
+ POST / 200 in 28.2s (compile: 21ms, render: 28.1s)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 7ms (compile: 3ms, render: 5ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 7ms (compile: 1056µs, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 1933µs, render: 9ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 8ms (compile: 1784µs, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 18ms (compile: 8ms, render: 10ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 5ms (compile: 1319µs, render: 3ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 6ms (compile: 1199µs, render: 5ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 7ms (compile: 3ms, render: 4ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 13ms (compile: 6ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 13ms (compile: 2ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 30ms (compile: 19ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 17ms (compile: 4ms, render: 13ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 71ms (compile: 51ms, render: 20ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 12ms (compile: 6ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 21ms (compile: 10ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 1836µs, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 21ms (compile: 7ms, render: 14ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 14ms (compile: 6ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 26ms (compile: 9ms, render: 17ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 8ms (compile: 2ms, render: 5ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 37ms (compile: 18ms, render: 19ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 1957µs, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 42ms (compile: 14ms, render: 27ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 12ms (compile: 4ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 25ms (compile: 9ms, render: 16ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 12ms (compile: 5ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 16ms (compile: 7ms, render: 9ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 12ms (compile: 5ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 40ms (compile: 16ms, render: 24ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 3ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 27ms (compile: 9ms, render: 19ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 7ms (compile: 2ms, render: 5ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 44ms (compile: 22ms, render: 22ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 4ms, render: 5ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 32ms (compile: 11ms, render: 21ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 5ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 20ms (compile: 9ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 4ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 16ms (compile: 5ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 4ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 26ms (compile: 9ms, render: 17ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 2ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 44ms (compile: 18ms, render: 26ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 6ms (compile: 1415µs, render: 4ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 15ms (compile: 4ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 3ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 19ms (compile: 7ms, render: 12ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 2ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 31ms (compile: 10ms, render: 22ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 2ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 38ms (compile: 17ms, render: 21ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 13ms (compile: 7ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 30ms (compile: 15ms, render: 15ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 2ms, render: 9ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 37ms (compile: 15ms, render: 23ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 3ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 20ms (compile: 10ms, render: 10ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 2ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 20ms (compile: 8ms, render: 12ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 12ms (compile: 4ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 36ms (compile: 10ms, render: 25ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 14ms (compile: 6ms, render: 9ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 14ms (compile: 4ms, render: 10ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 4ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+[getMarketData] Fetching quotes batch...
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+[getMarketData] Fetching quotes batch...
+[getMarketData] Quotes fetched in 674ms for 63 symbols
+[getMarketData] Fetching sparkline chart data...
+[getMarketData] Quotes fetched in 613ms for 63 symbols
+[getMarketData] Fetching sparkline chart data...
+  [005930.KS] Chart fetched in 311ms
+  [000660.KS] Chart fetched in 357ms
+  [108320.KQ] Chart fetched in 368ms
+  [000990.KS] Chart fetched in 400ms
+  [005930.KS] Chart fetched in 381ms
+  [000660.KS] Chart fetched in 390ms
+  [042700.KS] Chart fetched in 557ms
+[getMarketData] Batch 1/13 completed in 557ms
+  [000990.KS] Chart fetched in 607ms
+  [108320.KQ] Chart fetched in 620ms
+  [042700.KS] Chart fetched in 641ms
+[getMarketData] Batch 1/13 completed in 642ms
+  [403870.KQ] Chart fetched in 223ms
+  [240810.KQ] Chart fetched in 335ms
+  [036930.KQ] Chart fetched in 339ms
+  [084370.KQ] Chart fetched in 352ms
+  [029460.KS] Chart fetched in 447ms
+[getMarketData] Batch 2/13 completed in 447ms
+  [403870.KQ] Chart fetched in 434ms
+  [240810.KQ] Chart fetched in 462ms
+  [036930.KQ] Chart fetched in 476ms
+  [084370.KQ] Chart fetched in 563ms
+  [029460.KS] Chart fetched in 663ms
+[getMarketData] Batch 2/13 completed in 663ms
+  [281820.KS] Chart fetched in 355ms
+  [058470.KQ] Chart fetched in 390ms
+  [281820.KS] Chart fetched in 111ms
+  [039030.KQ] Chart fetched in 488ms
+  [058470.KQ] Chart fetched in 172ms
+  [039030.KQ] Chart fetched in 209ms
+  [232140.KQ] Chart fetched in 572ms
+  [095340.KQ] Chart fetched in 572ms
+[getMarketData] Batch 3/13 completed in 572ms
+  [232140.KQ] Chart fetched in 429ms
+  [357780.KQ] Chart fetched in 218ms
+  [067310.KQ] Chart fetched in 230ms
+  [281740.KQ] Chart fetched in 439ms
+  [005290.KQ] Chart fetched in 454ms
+  [101490.KQ] Chart fetched in 458ms
+[getMarketData] Batch 4/13 completed in 458ms
+  [095340.KQ] Chart fetched in 702ms
+[getMarketData] Batch 3/13 completed in 702ms
+  [NVDA] Chart fetched in 231ms
+  [009150.KS] Chart fetched in 252ms
+  [064760.KQ] Chart fetched in 259ms
+  [MU] Chart fetched in 264ms
+  [AMD] Chart fetched in 448ms
+[getMarketData] Batch 5/13 completed in 448ms
+  [357780.KQ] Chart fetched in 478ms
+  [067310.KQ] Chart fetched in 485ms
+  [005290.KQ] Chart fetched in 497ms
+  [281740.KQ] Chart fetched in 663ms
+  [101490.KQ] Chart fetched in 710ms
+[getMarketData] Batch 4/13 completed in 711ms
+  [QCOM] Chart fetched in 320ms
+  [INTC] Chart fetched in 475ms
+  [ARM] Chart fetched in 491ms
+  [TSM] Chart fetched in 564ms
+  [AVGO] Chart fetched in 577ms
+[getMarketData] Batch 6/13 completed in 577ms
+  [064760.KQ] Chart fetched in 440ms
+  [009150.KS] Chart fetched in 463ms
+  [NVDA] Chart fetched in 543ms
+  [MU] Chart fetched in 546ms
+  [AMD] Chart fetched in 659ms
+[getMarketData] Batch 5/13 completed in 660ms
+  [ASML] Chart fetched in 387ms
+  [LRCX] Chart fetched in 466ms
+  [AMAT] Chart fetched in 467ms
+  [KLAC] Chart fetched in 594ms
+  [TER] Chart fetched in 621ms
+[getMarketData] Batch 7/13 completed in 622ms
+  [AVGO] Chart fetched in 346ms
+  [QCOM] Chart fetched in 362ms
+  [ARM] Chart fetched in 502ms
+  [INTC] Chart fetched in 534ms
+  [TSM] Chart fetched in 585ms
+[getMarketData] Batch 6/13 completed in 585ms
+  [ENTG] Chart fetched in 318ms
+  [ADI] Chart fetched in 510ms
+  [TXN] Chart fetched in 514ms
+  [NXPI] Chart fetched in 538ms
+  [MCHP] Chart fetched in 560ms
+[getMarketData] Batch 8/13 completed in 560ms
+  [ASML] Chart fetched in 438ms
+  [AMAT] Chart fetched in 441ms
+  [LRCX] Chart fetched in 457ms
+  [KLAC] Chart fetched in 482ms
+  [ON] Chart fetched in 418ms
+  [TER] Chart fetched in 666ms
+[getMarketData] Batch 7/13 completed in 666ms
+  [MRVL] Chart fetched in 450ms
+  [SWKS] Chart fetched in 471ms
+  [QRVO] Chart fetched in 637ms
+  [MPWR] Chart fetched in 660ms
+[getMarketData] Batch 9/13 completed in 661ms
+  [TXN] Chart fetched in 341ms
+  [NXPI] Chart fetched in 460ms
+  [ADI] Chart fetched in 465ms
+  [ENTG] Chart fetched in 553ms
+  [MCHP] Chart fetched in 588ms
+[getMarketData] Batch 8/13 completed in 589ms
+  [WOLF] Chart fetched in 438ms
+  [ALGM] Chart fetched in 441ms
+  [RMBS] Chart fetched in 533ms
+  [LSCC] Chart fetched in 570ms
+  [ON] Chart fetched in 305ms
+  [COHR] Chart fetched in 656ms
+[getMarketData] Batch 10/13 completed in 656ms
+  [MRVL] Chart fetched in 420ms
+  [SWKS] Chart fetched in 459ms
+  [QRVO] Chart fetched in 526ms
+  [MPWR] Chart fetched in 532ms
+[getMarketData] Batch 9/13 completed in 532ms
+  [AMKR] Chart fetched in 337ms
+  [KRW=X] Chart fetched in 443ms
+  [DX-Y.NYB] Chart fetched in 453ms
+  [^TNX] Chart fetched in 555ms
+  [GFS] Chart fetched in 670ms
+[getMarketData] Batch 11/13 completed in 671ms
+  [WOLF] Chart fetched in 446ms
+  [ALGM] Chart fetched in 450ms
+  [RMBS] Chart fetched in 551ms
+  [LSCC] Chart fetched in 658ms
+  [^GSPC] Chart fetched in 223ms
+  [COHR] Chart fetched in 668ms
+[getMarketData] Batch 10/13 completed in 669ms
+  [^KS11] Chart fetched in 320ms
+  [^SOX] Chart fetched in 433ms
+  [^NDX] Chart fetched in 436ms
+  [CL=F] Chart fetched in 442ms
+[getMarketData] Batch 12/13 completed in 442ms
+  [AMKR] Chart fetched in 322ms
+  [GFS] Chart fetched in 422ms
+  [KRW=X] Chart fetched in 432ms
+  [^TNX] Chart fetched in 545ms
+  [GC=F] Chart fetched in 423ms
+  [HG=F] Chart fetched in 426ms
+  [DX-Y.NYB] Chart fetched in 726ms
+[getMarketData] Batch 11/13 completed in 726ms
+  [RIO] Chart fetched in 594ms
+[getMarketData] Batch 13/13 completed in 595ms
+[getMarketData] All sparkline charts fetched in 7269ms
+ POST / 200 in 8.0s (compile: 13ms, render: 8.0s)
+  [^KS11] Chart fetched in 215ms
+  [^SOX] Chart fetched in 222ms
+  [^GSPC] Chart fetched in 223ms
+  [^NDX] Chart fetched in 305ms
+  [CL=F] Chart fetched in 427ms
+[getMarketData] Batch 12/13 completed in 427ms
+  [HG=F] Chart fetched in 218ms
+  [GC=F] Chart fetched in 219ms
+  [RIO] Chart fetched in 273ms
+[getMarketData] Batch 13/13 completed in 273ms
+[getMarketData] All sparkline charts fetched in 7849ms
+ POST / 200 in 8.5s (compile: 5ms, render: 8.5s)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 23ms (compile: 10ms, render: 13ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 3ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 27ms (compile: 13ms, render: 14ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 19ms (compile: 4ms, render: 15ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 36ms (compile: 15ms, render: 20ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 17ms (compile: 1985µs, render: 15ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 26ms (compile: 9ms, render: 16ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 19ms (compile: 4ms, render: 15ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 38ms (compile: 11ms, render: 27ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 14ms (compile: 4ms, render: 10ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 39ms (compile: 17ms, render: 22ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 12ms (compile: 3ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 32ms (compile: 12ms, render: 21ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 14ms (compile: 2ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 32ms (compile: 16ms, render: 16ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 8ms (compile: 2ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 22ms (compile: 10ms, render: 12ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 41ms (compile: 35ms, render: 5ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 26ms (compile: 13ms, render: 13ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 2ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 27ms (compile: 9ms, render: 17ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 8ms (compile: 2ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 36ms (compile: 15ms, render: 21ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 2ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 38ms (compile: 22ms, render: 16ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 8ms (compile: 2ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 20ms (compile: 9ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 4ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 35ms (compile: 13ms, render: 23ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 15ms (compile: 2ms, render: 13ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 30ms (compile: 14ms, render: 16ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 12ms (compile: 3ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 30ms (compile: 8ms, render: 23ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 1912µs, render: 9ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 36ms (compile: 13ms, render: 23ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 2ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 25ms (compile: 12ms, render: 14ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 3ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 32ms (compile: 11ms, render: 21ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 2ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 20ms (compile: 8ms, render: 12ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 2ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 33ms (compile: 20ms, render: 14ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 1802µs, render: 9ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 21ms (compile: 6ms, render: 14ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 4ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 39ms (compile: 17ms, render: 22ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 13ms (compile: 2ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 27ms (compile: 13ms, render: 14ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 8ms (compile: 2ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 36ms (compile: 13ms, render: 22ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 7ms (compile: 1924µs, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 21ms (compile: 10ms, render: 12ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 2ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 40ms (compile: 21ms, render: 19ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 2ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 42ms (compile: 22ms, render: 21ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 8ms (compile: 2ms, render: 5ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 19ms (compile: 6ms, render: 13ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 1915µs, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+[getMarketData] Fetching quotes batch...
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+[getMarketData] Fetching quotes batch...
+[getMarketData] Quotes fetched in 615ms for 63 symbols
+[getMarketData] Fetching sparkline chart data...
+[getMarketData] Quotes fetched in 575ms for 63 symbols
+[getMarketData] Fetching sparkline chart data...
+  [005930.KS] Chart fetched in 258ms
+  [000990.KS] Chart fetched in 364ms
+  [108320.KQ] Chart fetched in 365ms
+  [000660.KS] Chart fetched in 388ms
+  [000660.KS] Chart fetched in 372ms
+  [005930.KS] Chart fetched in 374ms
+  [042700.KS] Chart fetched in 498ms
+[getMarketData] Batch 1/13 completed in 499ms
+  [000990.KS] Chart fetched in 573ms
+  [108320.KQ] Chart fetched in 609ms
+  [042700.KS] Chart fetched in 622ms
+[getMarketData] Batch 1/13 completed in 623ms
+  [403870.KQ] Chart fetched in 223ms
+  [036930.KQ] Chart fetched in 375ms
+  [240810.KQ] Chart fetched in 390ms
+  [084370.KQ] Chart fetched in 426ms
+  [029460.KS] Chart fetched in 470ms
+[getMarketData] Batch 2/13 completed in 470ms
+  [403870.KQ] Chart fetched in 418ms
+  [240810.KQ] Chart fetched in 479ms
+  [036930.KQ] Chart fetched in 504ms
+  [084370.KQ] Chart fetched in 532ms
+  [029460.KS] Chart fetched in 658ms
+[getMarketData] Batch 2/13 completed in 659ms
+  [281820.KS] Chart fetched in 418ms
+  [058470.KQ] Chart fetched in 454ms
+  [039030.KQ] Chart fetched in 495ms
+  [281820.KS] Chart fetched in 151ms
+  [058470.KQ] Chart fetched in 192ms
+  [039030.KQ] Chart fetched in 215ms
+  [095340.KQ] Chart fetched in 597ms
+  [232140.KQ] Chart fetched in 637ms
+[getMarketData] Batch 3/13 completed in 638ms
+  [095340.KQ] Chart fetched in 435ms
+  [232140.KQ] Chart fetched in 439ms
+[getMarketData] Batch 3/13 completed in 439ms
+  [357780.KQ] Chart fetched in 229ms
+  [067310.KQ] Chart fetched in 239ms
+  [281740.KQ] Chart fetched in 385ms
+  [005290.KQ] Chart fetched in 404ms
+  [101490.KQ] Chart fetched in 468ms
+[getMarketData] Batch 4/13 completed in 468ms
+  [067310.KQ] Chart fetched in 312ms
+  [357780.KQ] Chart fetched in 449ms
+  [005290.KQ] Chart fetched in 487ms
+  [281740.KQ] Chart fetched in 531ms
+  [101490.KQ] Chart fetched in 549ms
+[getMarketData] Batch 4/13 completed in 549ms
+  [064760.KQ] Chart fetched in 395ms
+  [009150.KS] Chart fetched in 451ms
+  [NVDA] Chart fetched in 481ms
+  [MU] Chart fetched in 482ms
+  [064760.KQ] Chart fetched in 264ms
+  [009150.KS] Chart fetched in 297ms
+  [AMD] Chart fetched in 614ms
+[getMarketData] Batch 5/13 completed in 615ms
+  [MU] Chart fetched in 495ms
+  [NVDA] Chart fetched in 504ms
+  [AMD] Chart fetched in 512ms
+[getMarketData] Batch 5/13 completed in 512ms
+  [AVGO] Chart fetched in 242ms
+  [ARM] Chart fetched in 364ms
+  [QCOM] Chart fetched in 388ms
+  [INTC] Chart fetched in 391ms
+  [AVGO] Chart fetched in 283ms
+  [QCOM] Chart fetched in 306ms
+  [TSM] Chart fetched in 481ms
+[getMarketData] Batch 6/13 completed in 482ms
+  [INTC] Chart fetched in 494ms
+  [ARM] Chart fetched in 500ms
+  [TSM] Chart fetched in 560ms
+[getMarketData] Batch 6/13 completed in 561ms
+  [ASML] Chart fetched in 245ms
+  [AMAT] Chart fetched in 395ms
+  [LRCX] Chart fetched in 400ms
+  [ASML] Chart fetched in 232ms
+  [AMAT] Chart fetched in 237ms
+  [KLAC] Chart fetched in 470ms
+  [TER] Chart fetched in 493ms
+[getMarketData] Batch 7/13 completed in 493ms
+  [LRCX] Chart fetched in 293ms
+  [TER] Chart fetched in 480ms
+  [KLAC] Chart fetched in 481ms
+[getMarketData] Batch 7/13 completed in 482ms
+  [ENTG] Chart fetched in 228ms
+  [TXN] Chart fetched in 330ms
+  [NXPI] Chart fetched in 440ms
+  [ADI] Chart fetched in 449ms
+  [MCHP] Chart fetched in 480ms
+[getMarketData] Batch 8/13 completed in 480ms
+  [ENTG] Chart fetched in 352ms
+  [ADI] Chart fetched in 471ms
+  [NXPI] Chart fetched in 494ms
+  [TXN] Chart fetched in 502ms
+  [MCHP] Chart fetched in 603ms
+[getMarketData] Batch 8/13 completed in 603ms
+  [ON] Chart fetched in 423ms
+  [MRVL] Chart fetched in 458ms
+  [SWKS] Chart fetched in 472ms
+  [ON] Chart fetched in 184ms
+  [MRVL] Chart fetched in 198ms
+  [QRVO] Chart fetched in 561ms
+  [SWKS] Chart fetched in 245ms
+  [QRVO] Chart fetched in 417ms
+  [MPWR] Chart fetched in 458ms
+[getMarketData] Batch 9/13 completed in 459ms
+  [MPWR] Chart fetched in 954ms
+[getMarketData] Batch 9/13 completed in 955ms
+  [RMBS] Chart fetched in 220ms
+  [ALGM] Chart fetched in 224ms
+  [WOLF] Chart fetched in 225ms
+  [COHR] Chart fetched in 440ms
+  [ALGM] Chart fetched in 284ms
+  [WOLF] Chart fetched in 290ms
+  [COHR] Chart fetched in 352ms
+  [RMBS] Chart fetched in 497ms
+  [LSCC] Chart fetched in 503ms
+[getMarketData] Batch 10/13 completed in 503ms
+  [LSCC] Chart fetched in 674ms
+[getMarketData] Batch 10/13 completed in 674ms
+  [DX-Y.NYB] Chart fetched in 221ms
+  [GFS] Chart fetched in 222ms
+  [AMKR] Chart fetched in 227ms
+  [KRW=X] Chart fetched in 239ms
+  [GFS] Chart fetched in 278ms
+  [KRW=X] Chart fetched in 341ms
+  [^TNX] Chart fetched in 438ms
+[getMarketData] Batch 11/13 completed in 438ms
+  [AMKR] Chart fetched in 436ms
+  [^TNX] Chart fetched in 449ms
+  [DX-Y.NYB] Chart fetched in 450ms
+[getMarketData] Batch 11/13 completed in 450ms
+  [^GSPC] Chart fetched in 217ms
+  [^KS11] Chart fetched in 228ms
+  [^SOX] Chart fetched in 241ms
+  [^NDX] Chart fetched in 244ms
+  [^GSPC] Chart fetched in 267ms
+  [^KS11] Chart fetched in 279ms
+  [^SOX] Chart fetched in 283ms
+  [^NDX] Chart fetched in 327ms
+  [CL=F] Chart fetched in 441ms
+[getMarketData] Batch 12/13 completed in 441ms
+  [CL=F] Chart fetched in 497ms
+[getMarketData] Batch 12/13 completed in 497ms
+  [HG=F] Chart fetched in 221ms
+  [GC=F] Chart fetched in 222ms
+  [RIO] Chart fetched in 261ms
+[getMarketData] Batch 13/13 completed in 262ms
+[getMarketData] All sparkline charts fetched in 6745ms
+ POST / 200 in 7.4s (compile: 18ms, render: 7.4s)
+  [GC=F] Chart fetched in 220ms
+  [HG=F] Chart fetched in 359ms
+  [RIO] Chart fetched in 400ms
+[getMarketData] Batch 13/13 completed in 400ms
+[getMarketData] All sparkline charts fetched in 6909ms
+ POST / 200 in 7.5s (compile: 2ms, render: 7.5s)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 28ms (compile: 15ms, render: 13ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 3ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 78ms (compile: 35ms, render: 42ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 1385µs, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 30ms (compile: 14ms, render: 16ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 2ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 39ms (compile: 20ms, render: 19ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 8ms (compile: 1879µs, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 32ms (compile: 10ms, render: 22ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 13ms (compile: 1761µs, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 38ms (compile: 18ms, render: 20ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 4ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 17ms (compile: 6ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 12ms (compile: 3ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 36ms (compile: 15ms, render: 21ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 16ms (compile: 6ms, render: 10ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 24ms (compile: 18ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 16ms (compile: 7ms, render: 9ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 27ms (compile: 11ms, render: 16ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 4ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 36ms (compile: 10ms, render: 27ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 3ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 31ms (compile: 11ms, render: 20ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 3ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 23ms (compile: 11ms, render: 12ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 4ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 5ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 4ms, render: 5ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 28ms (compile: 11ms, render: 16ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 2ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 8ms (compile: 3ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 37ms (compile: 10ms, render: 27ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 29ms (compile: 11ms, render: 18ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 3ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 32ms (compile: 11ms, render: 21ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 1700µs, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 16ms (compile: 7ms, render: 9ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 13ms (compile: 3ms, render: 10ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 15ms (compile: 6ms, render: 9ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 69ms (compile: 37ms, render: 33ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 46ms (compile: 21ms, render: 25ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 22ms (compile: 6ms, render: 16ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 78ms (compile: 32ms, render: 46ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 43ms (compile: 9ms, render: 34ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 23ms (compile: 8ms, render: 15ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 18ms (compile: 4ms, render: 13ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 39ms (compile: 26ms, render: 13ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 13ms (compile: 5ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 27ms (compile: 16ms, render: 12ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 13ms (compile: 4ms, render: 9ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 164ms (compile: 39ms, render: 125ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 30ms (compile: 8ms, render: 22ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 47ms (compile: 23ms, render: 24ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 2ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 40ms (compile: 18ms, render: 21ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 14ms (compile: 4ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 22ms (compile: 8ms, render: 15ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 16ms (compile: 5ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 26ms (compile: 9ms, render: 18ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 17ms (compile: 5ms, render: 13ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+[getMarketData] Fetching quotes batch...
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+[getMarketData] Fetching quotes batch...
+[getMarketData] Quotes fetched in 1173ms for 63 symbols
+[getMarketData] Fetching sparkline chart data...
+[getMarketData] Quotes fetched in 1881ms for 63 symbols
+[getMarketData] Fetching sparkline chart data...
+  [005930.KS] Chart fetched in 1043ms
+  [000660.KS] Chart fetched in 1131ms
+  [108320.KQ] Chart fetched in 1263ms
+  [000990.KS] Chart fetched in 1270ms
+  [000990.KS] Chart fetched in 633ms
+  [042700.KS] Chart fetched in 1503ms
+[getMarketData] Batch 1/13 completed in 1506ms
+  [005930.KS] Chart fetched in 657ms
+  [000660.KS] Chart fetched in 657ms
+  [108320.KQ] Chart fetched in 877ms
+  [403870.KQ] Chart fetched in 251ms
+  [042700.KS] Chart fetched in 891ms
+[getMarketData] Batch 1/13 completed in 893ms
+  [240810.KQ] Chart fetched in 470ms
+  [084370.KQ] Chart fetched in 489ms
+  [029460.KS] Chart fetched in 518ms
+  [036930.KQ] Chart fetched in 560ms
+[getMarketData] Batch 2/13 completed in 560ms
+  [084370.KQ] Chart fetched in 367ms
+  [403870.KQ] Chart fetched in 448ms
+  [036930.KQ] Chart fetched in 485ms
+  [240810.KQ] Chart fetched in 509ms
+  [029460.KS] Chart fetched in 635ms
+[getMarketData] Batch 2/13 completed in 636ms
+  [281820.KS] Chart fetched in 373ms
+  [058470.KQ] Chart fetched in 416ms
+  [039030.KQ] Chart fetched in 447ms
+  [095340.KQ] Chart fetched in 582ms
+  [232140.KQ] Chart fetched in 609ms
+[getMarketData] Batch 3/13 completed in 611ms
+  [281820.KS] Chart fetched in 321ms
+  [058470.KQ] Chart fetched in 365ms
+  [039030.KQ] Chart fetched in 495ms
+  [095340.KQ] Chart fetched in 525ms
+  [232140.KQ] Chart fetched in 550ms
+[getMarketData] Batch 3/13 completed in 553ms
+  [067310.KQ] Chart fetched in 331ms
+  [357780.KQ] Chart fetched in 437ms
+  [281740.KQ] Chart fetched in 495ms
+  [005290.KQ] Chart fetched in 497ms
+  [067310.KQ] Chart fetched in 226ms
+  [357780.KQ] Chart fetched in 280ms
+  [101490.KQ] Chart fetched in 561ms
+[getMarketData] Batch 4/13 completed in 561ms
+  [101490.KQ] Chart fetched in 342ms
+  [281740.KQ] Chart fetched in 461ms
+  [005290.KQ] Chart fetched in 479ms
+[getMarketData] Batch 4/13 completed in 481ms
+  [064760.KQ] Chart fetched in 252ms
+  [009150.KS] Chart fetched in 322ms
+  [064760.KQ] Chart fetched in 187ms
+  [009150.KS] Chart fetched in 245ms
+  [AMD] Chart fetched in 478ms
+  [MU] Chart fetched in 526ms
+  [NVDA] Chart fetched in 528ms
+  [NVDA] Chart fetched in 738ms
+  [MU] Chart fetched in 742ms
+[getMarketData] Batch 5/13 completed in 744ms
+  [AMD] Chart fetched in 586ms
+[getMarketData] Batch 5/13 completed in 587ms
+  [ARM] Chart fetched in 259ms
+  [AVGO] Chart fetched in 265ms
+  [QCOM] Chart fetched in 266ms
+  [QCOM] Chart fetched in 293ms
+  [TSM] Chart fetched in 511ms
+  [AVGO] Chart fetched in 481ms
+  [TSM] Chart fetched in 543ms
+  [INTC] Chart fetched in 608ms
+[getMarketData] Batch 6/13 completed in 615ms
+  [INTC] Chart fetched in 586ms
+  [ARM] Chart fetched in 686ms
+[getMarketData] Batch 6/13 completed in 693ms
+  [ASML] Chart fetched in 250ms
+  [AMAT] Chart fetched in 255ms
+  [ASML] Chart fetched in 203ms
+  [KLAC] Chart fetched in 364ms
+  [TER] Chart fetched in 483ms
+  [LRCX] Chart fetched in 540ms
+[getMarketData] Batch 7/13 completed in 543ms
+  [KLAC] Chart fetched in 431ms
+  [AMAT] Chart fetched in 448ms
+  [TER] Chart fetched in 486ms
+  [LRCX] Chart fetched in 527ms
+[getMarketData] Batch 7/13 completed in 527ms
+  [ENTG] Chart fetched in 285ms
+  [TXN] Chart fetched in 332ms
+  [NXPI] Chart fetched in 339ms
+  [ADI] Chart fetched in 356ms
+  [ENTG] Chart fetched in 294ms
+  [TXN] Chart fetched in 302ms
+  [MCHP] Chart fetched in 541ms
+[getMarketData] Batch 8/13 completed in 550ms
+  [MCHP] Chart fetched in 475ms
+  [ADI] Chart fetched in 504ms
+  [NXPI] Chart fetched in 577ms
+[getMarketData] Batch 8/13 completed in 578ms
+  [ON] Chart fetched in 229ms
+  [MRVL] Chart fetched in 260ms
+  [SWKS] Chart fetched in 285ms
+  [ON] Chart fetched in 200ms
+  [QRVO] Chart fetched in 342ms
+  [MRVL] Chart fetched in 232ms
+  [SWKS] Chart fetched in 258ms
+  [QRVO] Chart fetched in 277ms
+  [MPWR] Chart fetched in 462ms
+[getMarketData] Batch 9/13 completed in 470ms
+  [MPWR] Chart fetched in 531ms
+[getMarketData] Batch 9/13 completed in 533ms
+  [WOLF] Chart fetched in 218ms
+  [ALGM] Chart fetched in 220ms
+  [RMBS] Chart fetched in 242ms
+  [LSCC] Chart fetched in 412ms
+  [COHR] Chart fetched in 440ms
+[getMarketData] Batch 10/13 completed in 444ms
+  [ALGM] Chart fetched in 269ms
+  [WOLF] Chart fetched in 275ms
+  [RMBS] Chart fetched in 293ms
+  [LSCC] Chart fetched in 317ms
+  [COHR] Chart fetched in 324ms
+[getMarketData] Batch 10/13 completed in 325ms
+  [AMKR] Chart fetched in 256ms
+  [GFS] Chart fetched in 261ms
+  [DX-Y.NYB] Chart fetched in 274ms
+  [KRW=X] Chart fetched in 286ms
+  [AMKR] Chart fetched in 251ms
+  [GFS] Chart fetched in 267ms
+  [DX-Y.NYB] Chart fetched in 280ms
+  [KRW=X] Chart fetched in 308ms
+  [^TNX] Chart fetched in 469ms
+[getMarketData] Batch 11/13 completed in 470ms
+  [^TNX] Chart fetched in 483ms
+[getMarketData] Batch 11/13 completed in 485ms
+  [^KS11] Chart fetched in 220ms
+  [^GSPC] Chart fetched in 223ms
+  [^SOX] Chart fetched in 303ms
+  [^NDX] Chart fetched in 315ms
+  [^SOX] Chart fetched in 299ms
+  [^NDX] Chart fetched in 355ms
+  [CL=F] Chart fetched in 438ms
+[getMarketData] Batch 12/13 completed in 439ms
+  [^GSPC] Chart fetched in 373ms
+  [CL=F] Chart fetched in 450ms
+  [^KS11] Chart fetched in 454ms
+[getMarketData] Batch 12/13 completed in 454ms
+  [GC=F] Chart fetched in 231ms
+  [HG=F] Chart fetched in 243ms
+  [GC=F] Chart fetched in 222ms
+  [RIO] Chart fetched in 354ms
+[getMarketData] Batch 13/13 completed in 355ms
+[getMarketData] All sparkline charts fetched in 7871ms
+ POST / 200 in 9.1s (compile: 13ms, render: 9.1s)
+  [HG=F] Chart fetched in 347ms
+  [RIO] Chart fetched in 411ms
+[getMarketData] Batch 13/13 completed in 411ms
+[getMarketData] All sparkline charts fetched in 7158ms
+ POST / 200 in 9.1s (compile: 3ms, render: 9.0s)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 63ms (compile: 37ms, render: 27ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 34ms (compile: 6ms, render: 28ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 42ms (compile: 8ms, render: 34ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 19ms (compile: 6ms, render: 13ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 43ms (compile: 17ms, render: 26ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 6ms (compile: 1605µs, render: 5ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 12ms (compile: 4ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 12ms (compile: 2ms, render: 10ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 13ms (compile: 6ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 1807µs, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 25ms (compile: 7ms, render: 18ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 13ms (compile: 6ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 33ms (compile: 13ms, render: 20ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 2ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 20ms (compile: 10ms, render: 10ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 8ms (compile: 1898µs, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 2ms, render: 8ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 6ms (compile: 1321µs, render: 5ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 21ms (compile: 9ms, render: 12ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 8ms (compile: 2ms, render: 6ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 35ms (compile: 15ms, render: 20ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 16ms (compile: 1547µs, render: 14ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 35ms (compile: 15ms, render: 20ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 15ms (compile: 3ms, render: 12ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 19ms (compile: 8ms, render: 11ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 3ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 25ms (compile: 7ms, render: 18ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 9ms (compile: 4ms, render: 5ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 19ms (compile: 9ms, render: 10ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 10ms (compile: 3ms, render: 7ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 33ms (compile: 11ms, render: 22ms)
+[getMarketData] Starting data fetch...
+[getMarketData] Fetching data for 63 symbols
+ POST / 200 in 11ms (compile: 3ms, render: 8ms)
