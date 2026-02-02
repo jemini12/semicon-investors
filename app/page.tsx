@@ -14,13 +14,30 @@ export default function Home() {
     useEffect(() => {
         const fetchData = async (isInitial = false) => {
             try {
+                const startTime = performance.now();
+                console.log('[Client] 🔄 Starting market data fetch...', { isInitial, time: new Date().toISOString() });
                 if (isInitial) setIsLoadingMarket(true);
+
                 const data = await getMarketData();
-                if (data) setMarketData(data);
+                const fetchDuration = performance.now() - startTime;
+
+                console.log('[Client] ✅ Market data received!', {
+                    hasData: !!data,
+                    duration: `${fetchDuration.toFixed(0)}ms`,
+                    time: new Date().toISOString()
+                });
+
+                if (data) {
+                    setMarketData(data);
+                    console.log('[Client] 📊 State updated with market data');
+                }
             } catch (e) {
-                console.error('Failed to fetch market data:', e);
+                console.error('[Client] ❌ Failed to fetch market data:', e);
             } finally {
-                if (isInitial) setIsLoadingMarket(false);
+                if (isInitial) {
+                    console.log('[Client] 🏁 Setting isLoading = false', { time: new Date().toISOString() });
+                    setIsLoadingMarket(false);
+                }
             }
         };
 
