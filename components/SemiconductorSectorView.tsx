@@ -1,37 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { SECTOR_DATA } from "@/lib/ticker-data";
-
-import { getMarketData } from "@/app/actions/getMarketData";
 import LoadingSpinner from "./LoadingSpinner";
 import Sparkline from "./Sparkline";
 
+interface SemiconductorSectorViewProps {
+    data: { [symbol: string]: { price: number; change: number; marketCap: number; sparkline: number[] } } | null;
+    isLoading: boolean;
+}
 
-
-export default function SemiconductorSectorView() {
-
-    const [data, setData] = useState<{ [symbol: string]: { price: number; change: number; marketCap: number; sparkline: number[] } }>({});
-
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchData = async (isInitial = false) => {
-            try {
-                if (isInitial) setIsLoading(true);
-                const realData = await getMarketData();
-                if (realData) setData(realData);
-            } catch (e) {
-                console.error(e);
-            } finally {
-                if (isInitial) setIsLoading(false);
-            }
-        };
-        fetchData(true); // Initial load with loading state
-        const interval = setInterval(() => fetchData(false), 10000); // Polling without loading state
-        return () => clearInterval(interval);
-    }, []);
-
+export default function SemiconductorSectorView({ data, isLoading }: SemiconductorSectorViewProps) {
     const categories = ['Memory', 'Foundry', 'Logic', 'Equipment', 'Materials'];
 
     return (
@@ -53,20 +31,20 @@ export default function SemiconductorSectorView() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                                     {catItems
                                         .sort((a, b) => {
-                                            const changeA = data[a.symbol]?.change || 0;
-                                            const changeB = data[b.symbol]?.change || 0;
+                                            const changeA = data?.[a.symbol]?.change || 0;
+                                            const changeB = data?.[b.symbol]?.change || 0;
                                             return changeB - changeA; // Descending sort by Change %
                                         })
                                         .map(item => {
-                                            const price = data[item.symbol]?.price || item.basePrice;
-                                            const change = data[item.symbol]?.change || 0;
+                                            const price = data?.[item.symbol]?.price || item.basePrice;
+                                            const change = data?.[item.symbol]?.change || 0;
                                             const isNeutral = Math.abs(change) < 0.01;
                                             const isPositive = change >= 0 && !isNeutral;
 
                                             return (
                                                 <div key={item.symbol} className="relative flex items-center py-6 px-4 bg-portal-black/40 border border-white/5 hover:border-portal-accent/30 hover:bg-white/5 transition-colors group overflow-hidden">
                                                     {/* Sparkline Underlay */}
-                                                    <Sparkline data={data[item.symbol]?.sparkline || []} isPositive={isPositive} isUnderlay={true} />
+                                                    <Sparkline data={data?.[item.symbol]?.sparkline || []} isPositive={isPositive} isUnderlay={true} />
 
                                                     {/* Content Row (z-10 to stay above underlay) */}
                                                     <div className="relative z-10 flex items-center w-full">
