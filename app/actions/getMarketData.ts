@@ -30,36 +30,19 @@ export async function getMarketData() {
                     }
                 } = {};
 
-                // Fetch quotes for basic data
+                // Fetch quotes for basic data (FAST - single batch request)
                 const quotes = await yahooFinance.quote(symbols) as unknown as YahooQuote[];
 
-                // Fetch chart data for sparklines (1 month)
-                // We use a simplified chart fetch for all symbols
-                const chartPromises = symbols.map(async (symbol) => {
-                    try {
-                        const chartData = await yahooFinance.chart(symbol, {
-                            period1: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-                            interval: '1d',
-                        });
-                        return {
-                            symbol,
-                            prices: chartData.quotes?.map(q => q.close).filter((p): p is number => typeof p === 'number' && p !== null) || []
-                        };
-                    } catch (e) {
-                        console.error(`Failed to fetch chart for ${symbol}:`, e);
-                        return { symbol, prices: [] };
-                    }
-                });
-
-                const allCharts = await Promise.all(chartPromises);
+                // NOTE: Sparkline chart data removed to restore fast loading
+                // Fetching 30 days of chart data for 50+ symbols was causing 48s delays
+                // If needed in the future, implement as a separate lazy-loaded endpoint
 
                 quotes.forEach((quote: YahooQuote) => {
-                    const chart = allCharts.find(c => c.symbol === quote.symbol);
                     mappedResults[quote.symbol] = {
                         price: quote.regularMarketPrice || 0,
                         change: quote.regularMarketChangePercent || 0,
                         marketCap: quote.marketCap || 0,
-                        sparkline: chart?.prices || [],
+                        sparkline: [], // Empty - no chart data fetched
                     };
                 });
                 return mappedResults;
@@ -68,8 +51,8 @@ export async function getMarketData() {
                 return null;
             }
         },
-        ['market-data-with-sparklines-v1'],
-        { revalidate: 3600 } // 1 hour for historical data (more aggressive caching)
+        ['market-data-quotes-only-v2'], // Changed cache key
+        { revalidate: 300 } // 5 minutes - faster than hourly since we removed expensive chart data
     );
 
     return getCachedData();
