@@ -19,6 +19,7 @@ type MarketData = {
 export default function Home() {
     const [marketData, setMarketData] = useState<MarketData | null>(null);
     const [isLoadingMarket, setIsLoadingMarket] = useState(true);
+    const [showMarketInsights, setShowMarketInsights] = useState(false);
 
     // Progressive loading strategy
     useEffect(() => {
@@ -93,6 +94,12 @@ export default function Home() {
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        if (!isLoadingMarket && marketData) {
+            setShowMarketInsights(true);
+        }
+    }, [isLoadingMarket, marketData]);
+
     return (
         <main className="min-h-screen bg-portal-black text-white p-4 md:p-8 font-sans">
             <div className="max-w-7xl mx-auto space-y-12">
@@ -107,11 +114,6 @@ export default function Home() {
                     </div>
                 </header>
 
-                {/* AI-Powered Market Analysis - Independent from market data */}
-                <section>
-                    <MarketInsightsPanel />
-                </section>
-
                 {/* Main Sector View - Uses shared market data */}
                 <SemiconductorSectorView data={marketData} isLoading={isLoadingMarket} />
 
@@ -120,6 +122,12 @@ export default function Home() {
                     <MacroView data={marketData} isLoading={isLoadingMarket} />
                 </section>
 
+                {/* AI-Powered Market Analysis - Independent from market data */}
+                {showMarketInsights ? (
+                    <section>
+                        <MarketInsightsPanel />
+                    </section>
+                ) : null}
             </div>
         </main>
     );
