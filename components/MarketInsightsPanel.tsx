@@ -160,7 +160,7 @@ export default function MarketInsightsPanel() {
             {/* Expandable Content */}
             {isExpanded && (
                 <div className="p-6">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Macro Analysis */}
                         <div className="bg-gradient-to-br from-portal-black/80 to-portal-black/50 p-8 border border-white/10 hover:border-portal-accent/40 transition-all backdrop-blur-sm">
                             <h3 className="text-base font-bold text-portal-accent mb-5 flex items-center pb-3 border-b border-portal-accent/20">
