@@ -16,7 +16,7 @@ export interface MarketInsights {
 const webSearchTool = {
     web_search: openai.tools.webSearch({
         externalWebAccess: true,
-        searchContextSize: 'high',
+        searchContextSize: 'low',
     }),
 };
 
