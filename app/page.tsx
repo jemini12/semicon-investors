@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import SemiconductorSectorView from '@/components/SemiconductorSectorView';
 import MacroView from '@/components/MacroView';
 import MarketInsightsPanel from '@/components/MarketInsightsPanel';
 import { getMarketQuotes, getSparklines } from '@/app/actions/getMarketData';
@@ -113,9 +112,6 @@ export default function Home() {
                         </h1>
                     </div>
                 </header>
-
-                {/* Main Sector View - Uses shared market data */}
-                <SemiconductorSectorView data={marketData} isLoading={isLoadingMarket} />
 
                 {/* Macro Overview - Uses shared market data */}
                 <section>
