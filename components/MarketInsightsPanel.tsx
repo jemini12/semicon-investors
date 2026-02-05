@@ -160,7 +160,7 @@ export default function MarketInsightsPanel() {
             {/* Expandable Content */}
             {isExpanded && (
                 <div className="p-6">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Macro Analysis */}
                         <div className="bg-gradient-to-br from-portal-black/80 to-portal-black/50 p-8 border border-white/10 hover:border-portal-accent/40 transition-all backdrop-blur-sm">
                             <h3 className="text-base font-bold text-portal-accent mb-5 flex items-center pb-3 border-b border-portal-accent/20">
@@ -176,25 +176,6 @@ export default function MarketInsightsPanel() {
                             ) : (
                                 <div className="text-base text-slate-200 leading-relaxed font-normal">
                                     {formatAnalysisText(macroText)}
-                                </div>
-                            )}
-                        </div>
-
-                        {/* Semiconductor Analysis */}
-                        <div className="bg-gradient-to-br from-portal-black/80 to-portal-black/50 p-8 border border-white/10 hover:border-green-400/40 transition-all backdrop-blur-sm">
-                            <h3 className="text-base font-bold text-green-400 mb-5 flex items-center pb-3 border-b border-green-400/20">
-                                <span className="mr-2 text-xl">💾</span>
-                                Semiconductor Sector
-                            </h3>
-                            {semiLoading && !semiText ? (
-                                <div className="space-y-3 animate-pulse">
-                                    <div className="h-3 bg-white/5 rounded"></div>
-                                    <div className="h-3 bg-white/5 rounded"></div>
-                                    <div className="h-3 bg-white/5 rounded w-5/6"></div>
-                                </div>
-                            ) : (
-                                <div className="text-base text-slate-200 leading-relaxed font-normal">
-                                    {formatAnalysisText(semiText)}
                                 </div>
                             )}
                         </div>
