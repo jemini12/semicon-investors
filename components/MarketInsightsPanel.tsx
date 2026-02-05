@@ -1,19 +1,99 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { streamMacroAnalysis, streamSemiconductorAnalysis, streamHighlightAnalysis } from "@/app/actions/generateMarketInsights";
+import { useEffect, useState, type ReactNode } from "react";
+import {
+    streamMacroAnalysis,
+    streamSemiconductorAnalysis,
+    streamHighlightAnalysis,
+} from "@/app/actions/generateMarketInsights";
 
-// Helper function to enhance text with better spacing
-function formatAnalysisText(text: string) {
-    // Split by sentences for better spacing
-    const sentences = text.split(/(?<=[.!?])\s+/);
+const INLINE_MARKDOWN_PATTERN = /(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|\*[^*\n]+\*)/g;
 
-    return sentences.map((sentence, index) => (
-        <span key={index} className="block mb-3 last:mb-0">
-            {sentence}
-        </span>
-    ));
-}
+const renderInlineMarkdown = (text: string) => {
+    const parts = text.split(INLINE_MARKDOWN_PATTERN).filter(Boolean);
+
+    return parts.map((part, index) => {
+        const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (linkMatch) {
+            return (
+                <a
+                    key={`link-${index}`}
+                    href={linkMatch[2]}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-portal-accent underline underline-offset-4 hover:text-portal-accent/80"
+                >
+                    {linkMatch[1]}
+                </a>
+            );
+        }
+
+        const boldMatch = part.match(/^\*\*([^*]+)\*\*$/);
+        if (boldMatch) {
+            return <strong key={`bold-${index}`}>{boldMatch[1]}</strong>;
+        }
+
+        const italicMatch = part.match(/^\*([^*\n]+)\*$/);
+        if (italicMatch) {
+            return <em key={`italic-${index}`}>{italicMatch[1]}</em>;
+        }
+
+        return <span key={`text-${index}`}>{part}</span>;
+    });
+};
+
+const renderMarkdownBlocks = (text: string) => {
+    const lines = text.split(/\r?\n/);
+    const blocks: ReactNode[] = [];
+    let i = 0;
+
+    while (i < lines.length) {
+        const line = lines[i].trim();
+        if (!line) {
+            i += 1;
+            continue;
+        }
+
+        if (/^[-*]\s+/.test(line)) {
+            const items: ReactNode[] = [];
+            while (i < lines.length && /^[-*]\s+/.test(lines[i].trim())) {
+                const itemText = lines[i].trim().replace(/^[-*]\s+/, "");
+                items.push(<li key={`ul-item-${i}`}>{renderInlineMarkdown(itemText)}</li>);
+                i += 1;
+            }
+            blocks.push(
+                <ul key={`ul-${i}`} className="mb-3 last:mb-0 list-disc pl-5 space-y-2">
+                    {items}
+                </ul>
+            );
+            continue;
+        }
+
+        if (/^\d+\.\s+/.test(line)) {
+            const items: ReactNode[] = [];
+            while (i < lines.length && /^\d+\.\s+/.test(lines[i].trim())) {
+                const itemText = lines[i].trim().replace(/^\d+\.\s+/, "");
+                items.push(<li key={`ol-item-${i}`}>{renderInlineMarkdown(itemText)}</li>);
+                i += 1;
+            }
+            blocks.push(
+                <ol key={`ol-${i}`} className="mb-3 last:mb-0 list-decimal pl-5 space-y-2">
+                    {items}
+                </ol>
+            );
+            continue;
+        }
+
+        blocks.push(
+            <p key={`p-${i}`} className="mb-3 last:mb-0">
+                {renderInlineMarkdown(line)}
+            </p>
+        );
+        i += 1;
+    }
+
+    return blocks;
+};
 
 export default function MarketInsightsPanel() {
     const [macroText, setMacroText] = useState("");
@@ -175,7 +255,7 @@ export default function MarketInsightsPanel() {
                                 </div>
                             ) : (
                                 <div className="text-base text-slate-200 leading-relaxed font-normal">
-                                    {formatAnalysisText(macroText)}
+                                    {renderMarkdownBlocks(macroText)}
                                 </div>
                             )}
                         </div>
@@ -193,8 +273,8 @@ export default function MarketInsightsPanel() {
                                     <div className="h-3 bg-white/5 rounded w-5/6"></div>
                                 </div>
                             ) : (
-                                <div className="text-base text-slate-200 leading-relaxed font-normal whitespace-pre-line">
-                                    {formatAnalysisText(highlightText)}
+                                <div className="text-base text-slate-200 leading-relaxed font-normal">
+                                    {renderMarkdownBlocks(highlightText)}
                                 </div>
                             )}
                         </div>

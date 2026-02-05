@@ -13,6 +13,15 @@ export interface MarketInsights {
     generatedAt: string;
 }
 
+const webSearchTool = {
+    web_search: openai.tools.webSearch({
+        externalWebAccess: true,
+        searchContextSize: 'low',
+    }),
+};
+
+const webSearchToolChoice = { type: 'tool', toolName: 'web_search' } as const;
+
 // Helper to get current hour for cache key
 function getCurrentHourKey(): string {
     return Math.floor(Date.now() / (1000 * 60 * 60)).toString();
@@ -111,6 +120,8 @@ export async function streamMacroAnalysis() {
             const { textStream } = await streamText({
                 model: openai('gpt-5-mini'),
                 prompt,
+                tools: webSearchTool,
+                toolChoice: webSearchToolChoice,
             });
 
             // Collect full text for caching
@@ -150,6 +161,8 @@ export async function streamSemiconductorAnalysis() {
             const { textStream } = await streamText({
                 model: openai('gpt-5-mini'),
                 prompt,
+                tools: webSearchTool,
+                toolChoice: webSearchToolChoice,
             });
 
             let fullText = '';
@@ -187,6 +200,8 @@ export async function streamHighlightAnalysis() {
             const { textStream } = await streamText({
                 model: openai('gpt-5-mini'),
                 prompt,
+                tools: webSearchTool,
+                toolChoice: webSearchToolChoice,
             });
 
             let fullText = '';
