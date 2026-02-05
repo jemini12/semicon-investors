@@ -20,6 +20,8 @@ const webSearchTool = {
     }),
 };
 
+const webSearchToolChoice = { type: 'tool', toolName: 'web_search' } as const;
+
 // Helper to get current hour for cache key
 function getCurrentHourKey(): string {
     return Math.floor(Date.now() / (1000 * 60 * 60)).toString();
@@ -113,12 +115,13 @@ export async function streamMacroAnalysis() {
             const context = await prepareMacroContext();
             const prompt = `당신은 전문 금융 애널리스트입니다. 오늘의 시장 데이터를 바탕으로 시장 브리핑을 작성합니다: ${context}
 
-거시경제 환경에 대한 간결한 8-10문장의 분석을 한국어로 작성하세요. 전문적이고 블룸버그 스타일의 어조를 사용하세요. 데이터의 구체적인 수치를 포함하세요. "~입니다", "~습니다" 같은 격식있는 하십시오체를 사용하세요. AI라는 언급을 하지 마세요. 사람 애널리스트처럼 작성하세요.`;
+거시경제 환경에 대한 간결한 8-10문장의 분석을 한국어로 작성하세요. 전문적이고 블룸버그 스타일의 어조를 사용하세요. 데이터의 구체적인 수치를 포함하세요. "~입니다", "~습니다" 같은 격식있는 하십시오체를 사용하세요. AI라는 언급을 하지 마세요. 사람 애널리스트처럼 작성하세요. 링크가 필요한 경우 마크다운이 아닌 평문 URL만 사용하세요.`;
 
             const { textStream } = await streamText({
                 model: openai('gpt-5-mini'),
                 prompt,
                 tools: webSearchTool,
+                toolChoice: webSearchToolChoice,
             });
 
             // Collect full text for caching
@@ -153,12 +156,13 @@ export async function streamSemiconductorAnalysis() {
             const context = await prepareSemiconductorContext();
             const prompt = `당신은 전문 반도체 산업 애널리스트입니다. 오늘의 시장 움직임을 바탕으로: ${context}
 
-반도체 섹터에 대한 간결한 3-4문장의 분석을 한국어로 작성하세요. 메모리 사이클 지표, 장비 업체, 주요 트렌드에 집중하세요. 구체적인 회사명과 퍼센트를 사용하세요. "~입니다", "~습니다" 같은 격식있는 하십시오체를 사용하세요. 전문적이고 업계 내부자 같은 어조로 작성하세요. AI라는 언급을 하지 마세요.`;
+반도체 섹터에 대한 간결한 3-4문장의 분석을 한국어로 작성하세요. 메모리 사이클 지표, 장비 업체, 주요 트렌드에 집중하세요. 구체적인 회사명과 퍼센트를 사용하세요. "~입니다", "~습니다" 같은 격식있는 하십시오체를 사용하세요. 전문적이고 업계 내부자 같은 어조로 작성하세요. AI라는 언급을 하지 마세요. 링크가 필요한 경우 마크다운이 아닌 평문 URL만 사용하세요.`;
 
             const { textStream } = await streamText({
                 model: openai('gpt-5-mini'),
                 prompt,
                 tools: webSearchTool,
+                toolChoice: webSearchToolChoice,
             });
 
             let fullText = '';
@@ -191,12 +195,13 @@ export async function streamHighlightAnalysis() {
             const context = await prepareTopMoversContext();
             const prompt = `당신은 전문 주식 애널리스트입니다. 오늘의 상위 3개 종목 변동은: ${context}
 
-이러한 움직임을 주도하는 요인을 설명하는 간단한 분석을 한국어로 작성하세요. (번호는 따로 없는) 리스트 형식으로 회사당 1-2문장씩 작성하세요. "~입니다", "~습니다" 같은 격식있는 하십시오체를 사용하세요. 구체적이고 통찰력 있게 작성하세요. AI라는 언급을 하지 마세요. 사람 애널리스트처럼 작성하세요.`;
+이러한 움직임을 주도하는 요인을 설명하는 간단한 분석을 한국어로 작성하세요. (번호는 따로 없는) 리스트 형식으로 회사당 1-2문장씩 작성하세요. "~입니다", "~습니다" 같은 격식있는 하십시오체를 사용하세요. 구체적이고 통찰력 있게 작성하세요. AI라는 언급을 하지 마세요. 사람 애널리스트처럼 작성하세요. 링크가 필요한 경우 마크다운이 아닌 평문 URL만 사용하세요.`;
 
             const { textStream } = await streamText({
                 model: openai('gpt-5-mini'),
                 prompt,
                 tools: webSearchTool,
+                toolChoice: webSearchToolChoice,
             });
 
             let fullText = '';
